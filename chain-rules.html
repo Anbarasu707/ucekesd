@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chain rules</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+    .bix-div-introduction p {
+        margin-top: 15px;
+    }
+    .bix-div-introduction p {
+        line-height: 1.7;
+        font-family: arial;
+    }
+    i.ga-bar, i.ga-def, i.ga-fhead {
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .bix-ans-description p
+    {
+        font-family: arial;
+        font-size: medium;
+    }
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Chain Rule!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               <h3 style="font-weight: 600">Basic Formulas:</h3>
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+            <div class="bix-div-introduction">   
+                    <ol type="1">  
+                    <li>
+                        <p><i class="ga-fhead">Direct Proportion:</i></p>
+                        <p>Two quantities are said to be directly proportional, if on the increase (or decrease) of the one, the other increases (or decreases) to the same extent.</p>
+                        <p>Eg. Cost is directly proportional to the number of articles. <br>&nbsp; &nbsp; &nbsp; (More Articles, More Cost)</p>
+                    </li>
+                    <li>
+                        <p><i class="ga-fhead">Indirect Proportion:</i></p>
+                        <p>Two quantities are said to be indirectly proportional, if on the increase of the one, the orther decreases to the same extent and vice-versa.</p>
+                        <p>Eg. The time taken by a car is covering a certain distance is inversely proportional to the speed of the car. 
+                        (More speed, Less is the time taken to cover a distance.)</p>
+                        <p><i class="ga-def">Note:</i> In solving problems by chain rule, we compare every item with the term to be found out.</p>
+                    </li>
+                    </ol>
+            </div>
+    </div>
+    <h3 style="font-weight: 600">General Questions:</h3>
+    <div class="scp-quizzes-data">
+  <h4>1.	
+        3 pumps, working 8 hours a day, can empty a tank in 2 days. How many hours a day must 4 pumps work to empty the tank in 1 day?</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) 9</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 10</label><br/>
+        
+    <input type="radio" name="question1">
+       <label >(C) 11</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" id="C">
+       <label for="C">(D) 12</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (D)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> 
+                        <p>Let the required number of working hours per day be <i class="ga-var">x</i>.</p>
+                        <p><i>More pumps, Less working hours per day (Indirect Proportion)</i></p>
+                        <p><i>Less days, More working hours per day (Indirect Proportion)</i></p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-normal">
+                            <td class="ga-td-normal-rpad" align="left">Pumps</td>
+                            <td class="ga-td-normal" align="right">4</td>
+                            <td class="ga-td-normal-lrpad" align="center">:</td>
+                            <td class="ga-td-normal" align="left">3</td>
+                            <td class="ga-td-normal-lrpad" rowspan="2"><img src="images/aptitude/1-sym-cbrace-h2.gif"></td>
+                            <td class="ga-td-normal-rpad" rowspan="2"><b>::</b> 8 : <i class="ga-var">x</i></td>
+                         </tr>
+                         <tr class="ga-tr-normal">
+                            <td class="ga-td-normal-rpad" align="left">Days</td>
+                            <td class="ga-td-normal" align="right">1</td>
+                            <td class="ga-td-normal-lrpad" align="center">:</td>
+                            <td class="ga-td-normal" align="left">2</td>
+                         </tr>
+                        </tbody></table>
+                        </p>
+                        <p><img src="images/aptitude/1-sym-tfr.gif"> 4 x 1 x <i class="ga-var">x</i> = 3 x 2 x 8</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                            <td class="ga-td-divident">(3 x 2 x 8)</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">(4)</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 12.</p>
+                </div>
+            </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2. 	
+                Running at the same constant rate, 6 identical machines can produce a total of 270 bottles per minute. At this rate, how many bottles could 10 such machines produce in 4 minutes?</h4>
+        <br/>
+   
+        <input type="radio"  name="question1">
+       <label >(A) 648</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="a">
+       <label for="a">(B) 1800</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 2700</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label >(D) 10800</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (D)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                    <p>Let the required number of bottles be <i class="ga-var">x</i>.</p>
+                    <p><i>More machines, More bottles (Direct Proportion)</i></p>
+                    <p><i>More minutes, More bottles (Direct Proportion)</i></p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-normal">
+                        <td class="ga-td-normal-rpad" align="left">Machines</td>
+                        <td class="ga-td-normal" align="right">6</td>
+                        <td class="ga-td-normal-lrpad" align="center">:</td>
+                        <td class="ga-td-normal" align="left">10</td>
+                        <td class="ga-td-normal-lrpad" rowspan="2"><img src="images/aptitude/1-sym-cbrace-h2.gif"></td>
+                        <td class="ga-td-normal-rpad" rowspan="2"><b>::</b> 270 : <i class="ga-var">x</i></td>
+                     </tr>
+                     <tr class="ga-tr-normal">
+                        <td class="ga-td-normal-rpad" align="left">Time (in minutes)</td>
+                        <td class="ga-td-normal" align="right">1</td>
+                        <td class="ga-td-normal-lrpad" align="center">:</td>
+                        <td class="ga-td-normal" align="left">4</td>
+                     </tr>
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> 6 x 1 x <i class="ga-var">x</i> = 10 x 4 x 270</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                        <td class="ga-td-divident">(10 x 4 x 270)</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">(6)</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 1800.</p>
+                </div>
+            </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. 	
+                A fort had provision of food for 150 men for 45 days. After 10 days, 25 men left the fort. The number of days for which the remaining food will last, is:</p></h4>
+         
+         <input type="radio"  name="question1">
+       <label >(A) 29</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 37</label><br/>
+        
+    <input type="radio" name="question1" id="b">
+       <label for="b">(C) 42</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label>(D) 54</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+            <div class="bix-ans-description"> 
+                    <p>After 10 days : 150 men had food for 35 days.</p>
+                    <p>Suppose 125 men had food for <i class="ga-var">x</i> days.</p>
+                    <p>Now, <i>Less men, More days (Indirect Proportion)</i></p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif">  125 : 150 <b>::</b> 35 : <i class="ga-var">x</i> &nbsp;&nbsp; <img src="images/aptitude/1-sym-bim.gif"> &nbsp;&nbsp; 125 x <i class="ga-var">x</i> = 150 x 35</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = </td>
+                        <td class="ga-td-divident">150 x 35</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">125</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 42.</p>
+            </div>
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+          <h4>4.  39 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?</h4>
+          
+    <input type="radio"  name="question1">
+       <label >(A) 10</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="B">
+       <label for="B">(B) 13 </label><br/>
+        
+    <input type="radio" name="question1" >
+       <label>(C) 14</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 15</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                    <p>Let the required number of days be <i class="ga-var">x</i>.</p>
+                    <p><i>Less persons, More days (Indirect Proportion)</i></p>
+                    <p><i>More working hours per day, Less days (Indirect Proportion)</i></p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-normal">
+                        <td class="ga-td-normal-rpad" align="left">Persons</td>
+                        <td class="ga-td-normal" align="right">30</td>
+                        <td class="ga-td-normal-lrpad" align="center">:</td>
+                        <td class="ga-td-normal" align="left">39</td>
+                        <td class="ga-td-normal-lrpad" rowspan="2"><img src="images/aptitude/1-sym-cbrace-h2.gif"></td>
+                        <td class="ga-td-normal-rpad" rowspan="2"><b>::</b> 12 : <i class="ga-var">x</i></td>
+                     </tr>
+                     <tr class="ga-tr-normal">
+                        <td class="ga-td-normal-rpad" align="left">Working hours/day</td>
+                        <td class="ga-td-normal" align="right">6</td>
+                        <td class="ga-td-normal-lrpad" align="center">:</td>
+                        <td class="ga-td-normal" align="left">5</td>
+                     </tr>
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> 30 x 6 x <i class="ga-var">x</i> = 39 x 5 x 12</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                        <td class="ga-td-divident">(39 x 5 x 12)</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">(30 x 6)</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 13.</p>
+                    </div>
+            </ul>
+      </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4>5. 	
+                A flagstaff 17.5 m high casts a shadow of length 40.25 m. The height of the building, which casts a shadow of length 28.75 m under similar conditions will be:</h4>
+      <input type="radio"  name="question1" >
+        <label >(A) 10 m</label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1" id="A">
+         <label for="A">(B) 12.5 m</label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) 17.5 m</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1">
+         <label>(D) 21.25 m</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+            <div class="bix-ans-description"> <p>Let the height of the building <i class="ga-var">x</i> metres.</p>
+                <p><i>Less lengthy shadow, Less in the height (Direct Proportion)</i></p>
+                <p><img src="images/aptitude/1-sym-tfr.gif">  40.25 : 28.75 <b>::</b> 17.5 : <i class="ga-var">x</i> &nbsp;&nbsp; <img src="./Chain Rule - Aptitude Questions and Answers Page 3_files/1-sym-bim.gif"> &nbsp;&nbsp; 40.25 x <i class="ga-var">x</i> = 28.75 x 17.5</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> = </td>
+                    <td class="ga-td-divident">28.75 x 17.5</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">40.25</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 12.5</p>
+                
+            </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. 	
+            In a camp, there is a meal for 120 men or 200 children. If 150 children have taken the meal, how many men will be catered to with remaining meal?</p>
+         	
+        <input type="radio"  name="question1">
+          <label >(A) 20</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" id="f">
+          <label for="f">(B) 30</label><br/>
+     
+        <input type="radio" name="question1" >
+          <label >(C) 40</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) 50</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (B)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> 
+                    <p>There is a meal for 200 children. 150 children have taken the meal.</p>
+                    <p>Remaining meal is to be catered to 50 children.</p>
+                    <p>Now, 200 children <img src="images/aptitude/1-sym-deq.gif"> 120 men.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">50 children <img src="images/aptitude/1-sym-deq.gif"></td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">120</td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 50</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">= 30 men.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">200</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                   </div>
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7.  4 mat-weavers can weave 4 mats in 4 days. At the same rate, how many mats would be woven by 8 mat-weavers in 8 days?</p></h4>
+
+        <input type="radio"  name="question1">
+          <label >(A) 4</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 8</label><br/>
+     
+        <input type="radio" name="question1">
+          <label>(C) 12</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" id="e">
+          <label for="e">(D) 16</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (D)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> 
+                    <p>Let the required number of bottles be <i class="ga-var">x</i>.</p>
+                    <p><i>More weavers, More mats (Direct Proportion)</i></p>
+                    <p><i>More days, More mats (Direct Proportion)</i></p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-normal">
+                        <td class="ga-td-normal-rpad" align="left">Wavers</td>
+                        <td class="ga-td-normal" align="right">4</td>
+                        <td class="ga-td-normal-lrpad" align="center">:</td>
+                        <td class="ga-td-normal" align="left">8</td>
+                        <td class="ga-td-normal-lrpad" rowspan="2"><img src="images/aptitude/1-sym-cbrace-h2.gif"></td>
+                        <td class="ga-td-normal-rpad" rowspan="2"><b>::</b> 4 : <i class="ga-var">x</i></td>
+                     </tr>
+                     <tr class="ga-tr-normal">
+                        <td class="ga-td-normal-rpad" align="left">Days</td>
+                        <td class="ga-td-normal" align="right">4</td>
+                        <td class="ga-td-normal-lrpad" align="center">:</td>
+                        <td class="ga-td-normal" align="left">8</td>
+                     </tr>
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> 4 x 4 x <i class="ga-var">x</i> = 8 x 8 x 4</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                        <td class="ga-td-divident">(8 x 8 x 4)</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">(4 x 4)</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 16.</p>
+                     </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8.  If a quarter kg of potato costs 60 paise, how many paise will 200 gm cost?</p></h4>
+  
+          <input type="radio"  name="question1" id="d">
+            <label for="d">(A) 48 paise</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1" >
+            <label >(B) 54 paise</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 56 paise</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" >
+            <label>(D) 72 paise</label> 
+
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (A)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> 
+                        <p>Let the required weight be <i class="ga-var">x</i> kg.</p>
+                        <p><i>Less weight, Less cost (Direct Proportion)</i></p>
+                        <p><img src="images/aptitude/1-sym-tfr.gif"> 250 : 200 <b>::</b> 60 : <i class="ga-var">x</i> &nbsp;&nbsp;<img src="images/aptitude/1-sym-bim.gif"> &nbsp;&nbsp; 250 x <i class="ga-var">x</i> = (200 x 60)</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i>=</td>
+                            <td class="ga-td-divident">(200 x 60)</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">250</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 48.</p>
+                        
+                </div>
+            </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9. A wheel that has 6 cogs is meshed with a larger wheel of 14 cogs. When the smaller wheel has made 21 revolutions, then the number of revolutions mad by the larger wheel is:</p></h4>
+    
+            <input type="radio"  name="question1">
+              <label >(A) 4</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" id="g">
+              <label for="g">(B) 9</label><br/>
+         
+            <input type="radio" name="question1" >
+              <label >(C) 12</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1" >
+              <label>(D) 49</label>
+
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (B)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> 
+                        <p>Let the required number of revolutions made by larger wheel be <i class="ga-var">x</i>.</p>
+                        <p>Then, <i>More cogs, Less revolutions (Indirect Proportion)</i></p>
+                        <p><img src="images/aptitude/1-sym-tfr.gif">  14 : 6 <b>::</b> 21 : <i class="ga-var">x</i> &nbsp;&nbsp; <img src="images/aptitude/1-sym-bim.gif"> &nbsp;&nbsp; 14 x <i class="ga-var">x</i> = 6 x 21</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = </td>
+                            <td class="ga-td-divident">6 x 21</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">14</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 9.</p>
+                    </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10.  If 7 spiders make 7 webs in 7 days, then 1 spider will make 1 web in how many days?</p></h4>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 1</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" >
+                <label><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                        <tbody>
+                                <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(B) </td>
+                                    <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                   <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                       <td class="ga-td-divident">7</td>
+                    </tr>
+                    <tr class="ga-tr-divisor" align="center">
+                       <td class="ga-td-divisor">2</td>
+                    </tr> 
+                   </tbody></table></td></tr> 
+                       </tbody></table></label><br/>
+           
+              <input type="radio" name="question1" id="h" >
+                <label for="h">(C) 7</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1"  >
+                <label >(D) 49</label>
+  
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (C)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                            <p>Let the required number days be <i class="ga-var">x</i>.</p>
+                            <p><i>Less spiders, More days (Indirect Proportion)</i></p>
+                            <p><i>Less webs, Less days (Direct Proportion)</i></p>
+                            <p>
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                             <tbody><tr class="ga-tr-normal">
+                                <td class="ga-td-normal-rpad" align="left">Spiders</td>
+                                <td class="ga-td-normal" align="right">1</td>
+                                <td class="ga-td-normal-lrpad" align="center">:</td>
+                                <td class="ga-td-normal" align="left">7</td>
+                                <td class="ga-td-normal-lrpad" rowspan="2"><img src="images/aptitude/1-sym-cbrace-h2.gif"></td>
+                                <td class="ga-td-normal-rpad" rowspan="2"><b>::</b> 7 : <i class="ga-var">x</i></td>
+                             </tr>
+                             <tr class="ga-tr-normal">
+                                <td class="ga-td-normal-rpad" align="left">Webs</td>
+                                <td class="ga-td-normal" align="right">7</td>
+                                <td class="ga-td-normal-lrpad" align="center">:</td>
+                                <td class="ga-td-normal" align="left">1</td>
+                             </tr>
+                            </tbody></table>
+                            </p>
+                            <p><img src="images/aptitude/1-sym-tfr.gif"> 1 x 7 x <i class="ga-var">x</i> = 7 x 1 x 7</p>
+                            
+                            <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 7.</p>
+                    </div>
+                </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1 style="font-weight:600">Watch Vedio</h1>
+      
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/BSOp6fKqihI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</article>
+     
+    
+    
+</body>
+</html>
+	

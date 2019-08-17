@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: white;
+        -webkit-font-smoothing:antialiased;
+
+    }
+    main{
+        padding:10vw 0;
+    }
+    ul{
+        width:100%;
+        max-width:70%;
+        margin:0 auto;
+    }
+    li{
+        margin:10vw 0;
+        text-align:left;
+    }
+    p{
+        display: block;
+        color: #333;
+        font-family: tahoma;
+        font-size: 2vw;
+        font-weight: 700;
+        line-height: 1.2;
+
+    }
+    p + p{
+        margin-top: 10px;
+
+    }
+    li:first-child{
+        margin-top: 0;
+
+    }
+    li:last-child{
+        margin-left: 0;
+    }
+    li:nth-child(even){
+        text-align: right;
+    }
+    a{
+        color: white
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    [data-reveal="content"]{
+        display:inline-block;
+        position: relative;
+    }
+    [data-reveal="cover"]{
+        position:absolute;
+        top:0;
+        left:0;
+        width:0;
+        height:100%;
+        z-index:1;
+    }
+    [data-reveal="text"]{
+        opacity: 0;
+    }
+    [data-js="reveal"].loaded [data-reveal="cover"]{
+        animation: reveal-cover 1.5s ease-in-out;
+    }
+    [data-js="reveal"].loaded [data-reveal="text"]{
+        opacity:1;
+        animation:reveal-text 1.5s ease-in-out;
+    }
+    @keyframes reveal-cover{
+        0%{
+            width: 0;
+            left:0;
+        }
+        44%{
+            width: 100%;
+            left: 0;
+        }
+        54%{
+            width: 100%;
+            left: 0;
+        }
+        100%{
+            width: 0;
+            left: 100%;
+        }
+    }
+    @keyframes reveal-text{
+        0%{
+            opacity: 0;
+        }
+        44%{
+            opacity: 0;
+        }
+        54%{
+            opacity: 1;
+        }
+    }
+    .container {
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
+.container .btn-holder {
+  justify-content: flex-end;
+  display: flex;
+}
+.button {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.text{
+    display: block;
+    font-family: Montserrat,sans-serif;
+    font-size: 124px;
+    background: linear-gradient(90deg,#456990,#e5446d,#ffe66d 10%);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) skewX(-20deg);
+    padding: 10px 30px;
+    border:2px solid #000;
+    font-family: sans-serif;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: block;
+    box-sizing:border-box;
+}
+a:hover{
+    animation: ani 0.3s linear;
+    animation-delay: 0.7s;
+}
+a:before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+a:hover:before{
+    transform: scaleX(1);
+    transition-delay:1.2s;
+}
+@keyframes ani{
+    0%{
+        transform: translate(-50%,-50%) skewX(-20deg); 
+    }
+    25%{
+        transform: translate(-50%,-50%) skewX(20deg); 
+    }
+    50%{
+        transform: translate(-50%,-50%) skewX(-20deg); 
+    }
+    75%{
+        transform: translate(-50%,-50%) skewX(20deg); 
+    }
+    100%{
+        transform: translate(-50%,-50%) skewX(-20deg); 
+    }
+}
+
+    </style>
+</head>
+<body>
+        <h1 class="text">Help?..</h1>
+    <main>
+        <ul class="inner">
+            <li>
+                    <p data-js="reveal">Welcome to society of Computer Architecture</p>
+                    <p data-js="reveal">Placement Skills Development Site</p>
+                    <p data-js="reveal">To enhance the problem solving </p>
+                    <p data-js="reveal">cabablity of students and </p>
+                    <p data-js="reveal">to guide them to prepare for placements. </p>
+                    
+                </li>
+
+
+<li>
+        <p data-js="reveal">It comprises of learning </p>
+        <p data-js="reveal">and testing phase</p>
+        <p data-js="reveal">After the successfull registeration</p>
+        <p data-js="reveal">students can proceed towards learning..</p>
+</li>
+<li>
+        <p data-js="reveal">The learning section includes</p>
+</li>
+<li>
+        <p data-js="reveal">Arithmetic-Apptitude</p>
+        <p data-js="reveal">Verbal and Reasoning</p>
+        <p data-js="reveal">programming,current-affairs and interview</p>
+</li>
+<li>
+        <p data-js="reveal">After the successfull completion</p>
+        <p data-js="reveal">of each section students can take their </p>
+        <p data-js="reveal">Online test!!!</p>
+</li>
+
+<li>
+    <p data-js="reveal">By submitting the Quiz,you can</p>
+    <p data-js="reveal">able to check your marks..the correct answer and </p>
+    <p data-js="reveal">the explanation to your answers were also available.. </p>
+</li>
+<li>
+    <p data-js="reveal">You can also use features like google-keep</p>
+    <p data-js="reveal">to take your notes.. </p>
+    
+</li>
+<li>
+    <p data-js="reveal">Arithmetic puzzles and games</p>
+    <p data-js="reveal">are also available to enhance your </p>
+    <p data-js="reveal">problem solving cabability!!!</p>
+</li>
+
+
+
+
+
+           
+        </ul>
+    </main>
+    <script src="main.js"></script>
+    <div class="container">
+            <div class="btn-holder">
+                
+            </div>
+          </div>
+          
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>programming</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+     .button {
+  border-radius: 4px;
+  background-color:lightsteelblue;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 400px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    li.list-group-item{
+        font-family: serif;
+        width: 60%;
+        
+    }
+</style>
+<body>
+        <section>
+                <span>Programming languages!!</span>
+              </section>
+              <header>
+                <h1></h1> </header>
+               
+   <center>          
+    <article>
+                  
+       <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color: blue;font-weight: bold"><button class="button"><span>C programming</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <ul class="list-group" >
+            <a href="c/declare.html" style="color: black"> <li class="list-group-item">Declarations and Initializations</li></a>
+            <a href="c/func.html" style="color: black" ><li class="list-group-item">Functions</li></a>
+            <a href="c/point.html" style="color: black"><li class="list-group-item">Pointers</li></a>
+            <a href="c/str.html" style="color: black"><li class="list-group-item">Strings</li></a>
+            <a href="c/array.html" style="color: black"><li class="list-group-item">Arrays</li></a>
+            <a href="c/struct.html" style="color: black"><li class="list-group-item">Structures, Unions, Enums</li></a>
+            <a href="c/lib.html" style="color: black"><li class="list-group-item">Library Functions</li></a>
+            <a href="c/control.html" style="color: black"><li class="list-group-item">Control Instructions</li></a>
+            
+            
+          
+        </ul>
+       </div></div> 
+        
+        <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color: blue;font-weight: bold"> <button class="button"><span>C++ Programming</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <ul class="list-group" > 
+            <a href="c++/oop.html" style="color: black"> <li class="list-group-item">OOPS concepts</li></a>
+            <a href="c++/class.html" style="color: black"><li class="list-group-item">Classes and Objects</li></a>
+            <a href="c++/cons.html" style="color: black"><li class="list-group-item">Constructor and Destructor</li></a>
+            <a href="c++/func.html" style="color: black"><li class="list-group-item">Functions</li></a>
+            <a href="c++/ref.html" style="color: black"><li class="list-group-item">References</li></a>
+         </ul>
+       </div></div> 
+        
+ <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color: blue;font-weight: bold"> <button class="button"><span>Java Programming</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <ul class="list-group" > 
+            <a href="java/lang.html" style="color: black"><li class="list-group-item">Language Fundamentals</li></a>
+              <a href="java/opr.html" style="color: black"> <li class="list-group-item">Operators and Assignments</li></a>
+             <a href="java/exep.html" style="color: black"><li class="list-group-item">Exceptions</li></a>
+              <a href="java/inner.html" style="color: black"><li class="list-group-item">Inner Classes</li></a>
+              <a href="java/garb.html" style="color: black"><li class="list-group-item">Garbage Collections</li></a>
+              <a href="java/flow.html" style="color: black"><li class="list-group-item">Flow Control</li></a>
+              <a href="java/obj.html" style="color: black"><li class="list-group-item">Objects and Collections</li></a>
+              <a href="java/thread.html" style="color: black"><li class="list-group-item">Threads</li></a>
+        </ul>
+       </div></div>
+       <iframe width="660" height="355" src="https://www.youtube.com/embed/CE8yiqFQMdY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+        </article>
+    </center>
+    
+</body>
+</html>

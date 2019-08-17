@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test on Trains!!</title>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+</style>
+<body>
+        <section>
+                <span>Test1 on Apptitude!</span>
+
+                
+    
+              </section>
+             
+               
+              </header>
+              <article>
+                <h1>Instructions</h1>
+                
+                <ul class="ul-test-instruction">
+                <li>Total number of questions : <b>20</b>.</li>
+                
+                <li>Each question carry 1 mark, no negative marks.</li>
+                <li>DO NOT refresh the page.</li>
+                <li>All the best :-).</li>
+                </ul>
+    
+                <div id="quiz"></div>
+                <button id="submit" ondblclick='window.location="view-11.html"' >Submit Quiz</button>
+                <div id="results"></div>
+                <script>
+                (function() {
+          function buildQuiz() {
+            // we'll need a place to store the HTML output
+            const output = [];
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // we'll want to store the list of answer choices
+              const answers = [];
+        
+              // and for each available answer...
+              for (letter in currentQuestion.answers) {
+                // ...add an HTML radio button
+                answers.push(
+                  `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                  </label>`
+                );
+              }
+        
+              // add this question and its answers to the output
+              output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join("")} </div>`
+              );
+            });
+        
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join("");
+          }
+        
+          function showResults() {
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll(".answers");
+        
+            // keep track of user's answers
+            let numCorrect = 0;
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // find selected answer
+              const answerContainer = answerContainers[questionNumber];
+              const selector = `input[name=question${questionNumber}]:checked`;
+              const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        
+              // if answer is correct
+              if (userAnswer === currentQuestion.correctAnswer) {
+                // add to the number of correct answers
+                numCorrect++;
+        
+                // color the answers green
+                answerContainers[questionNumber].style.color = "lightgreen";
+              } else {
+                // if answer is wrong or blank
+                // color the answers red
+                answerContainers[questionNumber].style.color = "red";
+              }
+            });
+        
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}` ;
+          }
+        
+          const quizContainer = document.getElementById("quiz");
+          const resultsContainer = document.getElementById("results");
+          const submitButton = document.getElementById("submit");
+          const myQuestions = [
+            {
+              question: "	1.Find the greatest number that will divide 43, 91 and 183 so as to leave the same remainder in each case.",
+              answers: {
+                a: "4",
+                b: "7",
+                c: "9",
+                d:"13",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "	2.	The least perfect square, which is divisible by each of 21, 36 and 66 is:",
+              answers: {
+                a: "213444",
+                b: "214344",
+                c: "214434",
+                d:"231444",
+              },
+              correctAnswer: "a"
+            },
+
+       {
+              question: "	3.	If 20% of a = b, then b% of 20 is the same as:",
+              answers: {
+                a: "4 % of a",
+                b: "5 % of a",
+                c: "20 % of a",
+                d:"None of these",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "	4.  3 pumps, working 8 hours a day, can empty a tank in 2 days. How many hours a day must 4 pumps work to empty the tank in 1 day?",
+              answers: {
+                a: "9",
+                b: "10",
+                c: "11",
+                d:"12",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "5.	One pipe can fill a tank three times as fast as another pipe. If together the two pipes can fill the tank in 36 minutes, then the slower pipe alone will be able to fill the tank in:",
+              answers: {
+                a: "81 min.",
+                b: "108 min",
+                c: "144 min",
+                d: "192 min",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "6. The H.C.F. of two numbers is 23 and the other two factors of their L.C.M. are 13 and 14. The larger of the two numbers is:",
+              answers: {
+                a:	"276",
+                b:	"299",
+                c:	"322",
+                d:  "345",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "7. If A = x% of y and B = y% of x, then which of the following is true?",
+              answers: {
+                a:	"A is smaller than B",
+                b:	"A is greater than B",
+                c:	"If x is smaller than y, then A is greater than B",
+                d:  "None of these",
+
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "8. A motorboat, whose speed in 15 km/hr in still water goes 30 km downstream and comes back in a total of 4 hours 30 minutes. The speed of the stream (in km/hr) is:",
+              answers: {
+                a:	"4",
+                b:	"5",
+                c:	"6",
+                d:  "10",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "9. A man took loan from a bank at the rate of 12% p.a. simple interest. After 3 years he had to pay Rs. 5400 interest only for the period. The principal amount borrowed by him was:",
+              answers: {
+                a:	"2,000",
+                b:	"10,000",
+                c:	"15,000",
+                d:  "20,000",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "10. A man walked diagonally across a square lot. Approximately, what was the percent saved by not walking along the edges?",
+              answers: {
+                a:	"20",
+                b:	"24",
+                c:	"30",
+                d:  "34",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "11. A man buys a watch for Rs. 1950 in cash and sells it for Rs. 2200 at a credit of 1 year. If the rate of interest is 10% per annum, the man:",
+              answers: {
+                a:	"gains Rs. 55",
+                b:	"gains Rs. 50",
+                c:	"loses Rs. 30",
+                d:  "gains Rs. 30",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "12. The average monthly income of P and Q is Rs. 5050. The average monthly income of Q and R is Rs. 6250 and the average monthly income of P and R is Rs. 5200. The monthly income of P is:",
+              answers: {
+                a:	"3500",
+                b:	"4050",
+                c:	"4000",
+                d:  "5000",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "13. The sum of two number is 25 and their difference is 13. Find their product.",
+              answers: {
+                a:	"114",
+                b:	"104",
+                c:	"325",
+                d:  "333",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "14. A fires 5 shots to B's 3 but A kills only once in 3 shots while B kills once in 2 shots. When B has missed 27 times, A has killed:",
+              answers: {
+                a:	"30 birds",
+                b:	"60 birds",
+                c:	"72 birds",
+                d:  "90 birds",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "15. Robert is travelling on his cycle and has calculated to reach point A at 2 P.M. if he travels at 10 kmph, he will reach there at 12 noon if he travels at 15 kmph. At what speed must he travel to reach A at 1 P.M.?",
+              answers: {
+                a:	"8  kmph",
+                b:	"11  kmph",
+                c:	"12  kmph",
+                d:  "14  kmph",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "16. If log	(a/b)	+	log	(b/a)	= log (a + b), then:",
+              answers: {
+                a:	"a + b = 1",
+                b:	"a - b = 1",
+                c:	"a = b",
+                d:  "a<sup>2</sup> - b<sup>2</sup> =1",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "17. If 6<sup>th</sup> March, 2005 is Monday, what was the day of the week on 6<sup>th </sup>March, 2004?",
+              answers: {
+                a:	"Saturday",
+                b:	"Wednesday",
+                c:	"Thursday",
+                d:  "Sunday",
+
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "18. From a pack of 52 cards, two cards are drawn together at random. What is the probability of both the cards being kings?",
+              answers: {
+                a:	"1/15",
+                b:	"25/57",
+                c:	"1/221",
+                d:  "35/256",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "19. Find out the wrong number in the given sequence of numbers.22, 33, 66, 99, 121, 279, 594",
+              answers: {
+                a:	"33",
+                b:	"279",
+                c:	"121",
+                d:  "594",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "20. The product of two numbers is 9375 and the quotient, when the larger one is divided by the smaller, is 15. The sum of the numbers is:",
+              answers: {
+                a:	"380",
+                b:	"395",
+                c:	"400",
+                d:  "425",
+
+              },
+              correctAnswer: "c"
+            },
+
+          
+          ];
+        
+          // display quiz right away
+          buildQuiz();
+        
+          // on submit, show results
+          submitButton.addEventListener("click", showResults);
+        })();
+                </script>        </article>
+    
+</body>
+</html>

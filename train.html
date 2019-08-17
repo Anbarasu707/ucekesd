@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train problems</title>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+</style>
+<body>
+        <section>
+                <span>Problem on Trains!</span>
+              </section>
+              <header>
+                <h1></h1>
+               
+              </header>
+              <article>
+                <h1>Basic Formulas</h1>
+                <li>
+                        <p><i class="ga-fhead">km/hr to m/s conversion:</i></p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> km/hr =</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> x</td>
+                            <td class="ga-td-divident">5</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-rpad" rowspan="2">m/s.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">18</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p><i class="ga-fhead">m/s to km/hr conversion:</i></p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> m/s =</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> x</td>
+                            <td class="ga-td-divident">18</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-lrpad" rowspan="2">km/hr.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">5</td>
+                         </tr> 
+                        </tbody></table>
+                        
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p><b><a href="/aptitude/time-and-distance/formulas">Formulas for finding Speed, Time and Distance</a></b></p>
+                        </li>
+                        
+                        <li>
+                        <p>Time taken by a train of length <i class="ga-var">l</i> metres to pass a pole or standing man or a signal post is equal to the time taken by the train to cover <i class="ga-var">l</i> metres.</p>
+                        </li>
+                        
+                        <li>
+                        <p>Time taken by a train of length <i class="ga-var">l</i> metres to pass a stationery object of length <i class="ga-var">b</i> metres is the time taken by the train to cover (<i class="ga-var">l</i> + <i class="ga-var">b</i>) metres.</p>
+                        </li>
+                        
+                        <li>
+                        <p>Suppose two trains or two objects bodies are moving in  the same direction at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, where <i class="ga-var">u</i> &gt; <i class="ga-var">v</i>, then their relative speed is = (<i class="ga-var">u</i> - <i class="ga-var">v</i>) m/s.</p>
+                        </li>
+                        
+                        <li>
+                        <p>Suppose two trains or two objects bodies are moving in opposite directions at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, then their relative speed is = (<i class="ga-var">u</i> + <i class="ga-var">v</i>) m/s.</p>
+                        </li>
+                        
+                        <li>
+                        <p>If two trains of length <i class="ga-var">a</i> metres and <i class="ga-var">b</i> metres are moving in opposite directions at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, then:</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">The time taken by the trains to cross each other =</td>
+                            <td class="ga-td-divident">(<i class="ga-var">a</i> + <i class="ga-var">b</i>)</td>
+                            <td class="ga-td-line-lpad" rowspan="2">sec.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">(<i class="ga-var">u</i> + <i class="ga-var">v</i>)</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p>If two trains of length <i class="ga-var">a</i> metres and <i class="ga-var">b</i> metres are moving in the same direction at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, then:</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">The time taken by the faster train to cross the slower train =</td>
+                            <td class="ga-td-divident">(<i class="ga-var">a</i> + <i class="ga-var">b</i>)</td>
+                            <td class="ga-td-line-lpad" rowspan="2">sec.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">(<i class="ga-var">u</i> - <i class="ga-var">v</i>)</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p>If two trains (or bodies) start at the same time from points A and B towards each other and after crossing they take <i class="ga-var">a</i> and <i class="ga-var">b</i> sec in reaching B and A respectively, then:</p>
+                        <p>(A's speed) : (B's speed) = (<span class="ga-root-h1">b</span> : <span class="ga-root-h1">a</span>)</p>
+                        </li>
+                        
+                        </ol>
+                        <h1>Watch video</h1>
+                        <iframe width="660" height="315" src="https://www.youtube.com/embed/-0aO3U6lnrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+    
+</body>
+</html>

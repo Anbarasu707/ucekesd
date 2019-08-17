@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>current affairs!</title>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+</style>
+<body>
+        <section>
+                <span>Current Affairs!</span>
+              </section>
+              <header>
+                <h1></h1>
+               
+              </header>
+              <article>
+                <h1>sections:</h1>
+                <ul>
+                    <li><a href="state.html">State</a></li>
+                    <li><a href="national.html"> National</a></li>
+                    <li><a href="international.html"> International</a></li>
+                   
+                    <li> <a href="awards.html">Awards and Honours</a></li>
+                  
+                    <li><a href="defence.html"> Defence</a></li>
+                    <li><a href="education.html"> Education</a></li>
+                    <li><a href="festivity.html"> Festivity</a></li>
+                    <li><a href="obituary.html"> Obituary</a></li>
+                    <li><a href="science.html"> Science</a></li>
+                    <li><a href="talkies.html"> Talkies</a></li>
+                    <li><a href="miscellaneous.html"> Miscellaneous</a></li>
+                    <li> <a href="politics.html">politics</a></li>
+                </ul>
+                 
+                <!--li>
+                        <p><i class="ga-fhead">km/hr to m/s conversion:</i></p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> km/hr =</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> x</td>
+                            <td class="ga-td-divident">5</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-rpad" rowspan="2">m/s.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">18</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p><i class="ga-fhead">m/s to km/hr conversion:</i></p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> m/s =</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> x</td>
+                            <td class="ga-td-divident">18</td>
+                            <td class="ga-td-line" rowspan="2"></td>
+                            <td class="ga-td-line-lrpad" rowspan="2">km/hr.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">5</td>
+                         </tr> 
+                        </tbody></table>
+                        
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p><b><a href="/aptitude/time-and-distance/formulas">Formulas for finding Speed, Time and Distance</a></b></p>
+                        </li>
+                        
+                        <li>
+                        <p>Time taken by a train of length <i class="ga-var">l</i> metres to pass a pole or standing man or a signal post is equal to the time taken by the train to cover <i class="ga-var">l</i> metres.</p>
+                        </li>
+                        
+                        <li>
+                        <p>Time taken by a train of length <i class="ga-var">l</i> metres to pass a stationery object of length <i class="ga-var">b</i> metres is the time taken by the train to cover (<i class="ga-var">l</i> + <i class="ga-var">b</i>) metres.</p>
+                        </li>
+                        
+                        <li>
+                        <p>Suppose two trains or two objects bodies are moving in  the same direction at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, where <i class="ga-var">u</i> &gt; <i class="ga-var">v</i>, then their relative speed is = (<i class="ga-var">u</i> - <i class="ga-var">v</i>) m/s.</p>
+                        </li>
+                        
+                        <li>
+                        <p>Suppose two trains or two objects bodies are moving in opposite directions at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, then their relative speed is = (<i class="ga-var">u</i> + <i class="ga-var">v</i>) m/s.</p>
+                        </li>
+                        
+                        <li>
+                        <p>If two trains of length <i class="ga-var">a</i> metres and <i class="ga-var">b</i> metres are moving in opposite directions at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, then:</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">The time taken by the trains to cross each other =</td>
+                            <td class="ga-td-divident">(<i class="ga-var">a</i> + <i class="ga-var">b</i>)</td>
+                            <td class="ga-td-line-lpad" rowspan="2">sec.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">(<i class="ga-var">u</i> + <i class="ga-var">v</i>)</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p>If two trains of length <i class="ga-var">a</i> metres and <i class="ga-var">b</i> metres are moving in the same direction at <i class="ga-var">u</i> m/s and <i class="ga-var">v</i> m/s, then:</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">The time taken by the faster train to cross the slower train =</td>
+                            <td class="ga-td-divident">(<i class="ga-var">a</i> + <i class="ga-var">b</i>)</td>
+                            <td class="ga-td-line-lpad" rowspan="2">sec.</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">(<i class="ga-var">u</i> - <i class="ga-var">v</i>)</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </li>
+                        
+                        <li>
+                        <p>If two trains (or bodies) start at the same time from points A and B towards each other and after crossing they take <i class="ga-var">a</i> and <i class="ga-var">b</i> sec in reaching B and A respectively, then:</p>
+                        <p>(A's speed) : (B's speed) = (<span class="ga-root-h1">b</span> : <span class="ga-root-h1">a</span>)</p>
+                        </li>
+                        
+                        </ol-->
+                        <!--div>
+                            <div class="dropdown">
+                                <button class="dropbtn">Sections</button>
+                                <div class="dropdown-content">
+                                  <a href="declare.html">State</a>
+                                  <a href="national.html">National</a>
+                                  <a href="inter.html">International</a>
+                                  <a href="agri.html">Agriculture</a>
+                                  <a href="award.html">Awards and Honours</a>
+                                  <a href="bills.html">Bills and Acts</a>
+                                  <a href="defence.html">Defence</a>
+                                  <a href="edu.html">Education</a>
+                                  <a href="fes.html">Festivity</a>
+                                  <a href="ob.html">Obituary</a>
+                                  <a href="sci.html">Science</a>
+                                  <a href="talk.html">Talkies</a>
+                                  <a href="">Miscellaneous</a>
+                                  <a href="#">politics</a>
+                                 
+                                </div>
+                              </div-->
+                       
+        </article>
+    
+</body>
+</html>

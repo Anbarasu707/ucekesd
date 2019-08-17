@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test on Programming!!</title>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+</style>
+<body>
+        <section>
+                <span>Test on Programming!</span>
+
+                
+    
+              </section>
+             
+               
+              </header>
+              <article>
+                <h1>Instructions</h1>
+                
+                <ul class="ul-test-instruction">
+                <li>Total number of questions : <b>20</b>.</li>
+                
+                <li>Each question carry 1 mark, no negative marks.</li>
+                <li>DO NOT refresh the page.</li>
+                <li>All the best :-).</li>
+                </ul>
+    
+                <div id="quiz"></div>
+                <button id="submit" ondblclick="window.location='view111.html'">Submit Quiz</button>
+                <div id="results"></div>
+                  
+                <script>
+        
+                (function() {
+          function buildQuiz() {
+            // we'll need a place to store the HTML output
+            const output = [];
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // we'll want to store the list of answer choices
+              const answers = [];
+        
+              // and for each available answer...
+              for (letter in currentQuestion.answers) {
+                // ...add an HTML radio button
+                answers.push(
+                  `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                  </label>`
+                );
+              }
+        
+              // add this question and its answers to the output
+              output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join("")} </div>`
+              );
+            });
+        
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join("");
+          }
+        
+          function showResults() {
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll(".answers");
+        
+            // keep track of user's answers
+            let numCorrect = 0;
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // find selected answer
+              const answerContainer = answerContainers[questionNumber];
+              const selector = `input[name=question${questionNumber}]:checked`;
+              const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        
+              // if answer is correct
+              if (userAnswer === currentQuestion.correctAnswer) {
+                // add to the number of correct answers
+                numCorrect++;
+        
+                // color the answers green
+                answerContainers[questionNumber].style.color = "lightgreen";
+              } else {
+                // if answer is wrong or blank
+                // color the answers red
+                answerContainers[questionNumber].style.color = "red";
+              }
+            });
+        
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+          }
+        
+          const quizContainer = document.getElementById("quiz");
+          const resultsContainer = document.getElementById("results");
+          const submitButton = document.getElementById("submit");
+          const myQuestions = [
+            {
+              question: " 1. In C, if you pass an array as an argument to a function, what actually gets passed? ",
+              answers: {
+                a: "Value of elements in array",
+                b: "First element of the array",
+                c: "Base address of the array",
+                d: "Address of the last element of array",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "	2. What will be the output of the program ?<pre>int main() <br/>{<br/>int a[5] = {5, 1, 15, 20, 25}; <br/>int i, j, m;<br/>i = ++a[1];<br/>j = a[1]++;<br/>m = a[i++];<br/>printf (''%d, %d, %d'', i, j, m);<br/>return 0;<br/>}</pre> " 
+                ,
+                answers: {
+                a: "2,1,15",
+                b: "1,2,5",
+                c: "3,2,15",
+                d: "2,3,20",
+              },
+              correctAnswer: "c"
+            },
+
+       {
+              question: " 3. Which of the following cannot be checked in a switch-case statement? ",
+              answers: {
+                a: "Character",
+                b: "Integer",
+                c: "Float",
+                d: "enum",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: " 4. What will be the output of the program?<pre>int main()<br/>{<br/>int x, y, z;<br/> x=y=z=1;<br/>z = ++x || ++y && ++z;<br/>printf(''x=%d, y=%d, z=%d\n'', x, y, z);<br/>return 0;<br/>}</pre>",
+              answers: {
+                a: "x=2, y=1, z=1",
+                b: "x=2, y=2, z=1",
+                c: "x=2, y=2, z=2",
+                d: "x=1, y=2, z=1",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "5.	Which of the declaration is correct?",
+              answers: {
+                a: "int length;",
+                b: "char int;",
+                c: "int long;",
+                d: "float double;",
+              },
+              correctAnswer: "a"
+            },
+          {
+              question: "6. Which of the following correctly represents a long double constant? ",
+              answers: {
+                a: "6.68",
+                b: "6.68L",
+                c: "6.68f",
+                d: "6.68LF",
+              },
+              correctAnswer: "b"
+            },
+              {
+              question: "7. Point out the error in the program <br/><pre>f(int a, int b)<br/>{<br/>int a;<br/>a = 20;<br/> return a;<br/>}</pre> ",
+              answers: {
+                a: "Missing parenthesis in return statement",
+                b: "function should be defined as int f(int a, int b)",
+                c: "Redeclaration of a",
+                d: "None of above",
+              },
+              correctAnswer: "c"
+            },
+           
+              {
+              question: " 8. The keyword used to transfer control from a function back to the calling function is ",
+              answers: {
+                a: "switch",
+                b: "goto",
+                c: "go back",
+                d: "return",
+              },
+              correctAnswer: "d"
+            },
+              {
+              question: "9. Which of the following also known as an instance of a class? ",
+              answers: {
+                a: "Friend Functions",
+                b: "Object functions",
+                c: "Member Functions",
+                d: "Member Variables",
+              },
+              correctAnswer: "b"
+            },
+              
+              {
+              question: "10. Which of the following keywords is used to control access to a class member? ",
+              answers: {
+                a: "Default",
+                b: "Break",
+                c: "Protected",
+                d: "Asm",
+              },
+              correctAnswer: "c"
+            },
+              
+              {
+              question: "11. Which of the following cannot be declared as virtual? ",
+              answers: {
+                a: "Constructor",
+                b: "Destructor",
+                c: "Data Members",
+                d: "Both A and C",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "	12.	Which constructor function is designed to copy objects of the same class type?",
+              answers: {
+                a: "Create constructor",
+                b: "Object constructor",
+                c: "Dynamic constructor",
+                d: "Copy constructor",
+              },
+              correctAnswer: "d"
+            },
+
+       {
+              question: " 13. What will be the output of the following program?<br/><pre>#include<iostream.h><br/> void MyFunction(int a, int b = 40)<br/>{<br/>cout<< '' a = ''<< a << '' b = '' << b << endl;<br/>}<br/>int main()<br/>{<br/>MyFunction(20, 30);<br/>return 0;<br/> }</pre>",
+              answers: {
+                a: "a = 20 b = 40",
+                b: "a = 20 b = 30",
+                c: "a = 20 b = Garbage",
+                d: "a = Garbage b = 40",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: " 14. Where the default value of parameter have to be specified?",
+              answers: {
+                a: "Function call",
+                b: "Function definition",
+                c: "Function prototype",
+                d: "Both B or C",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "15. Which of the following concepts of OOPS means exposing only necessary information to client?",
+              answers: {
+                a: "Encapsulation",
+                b: "Abstraction",
+                c: "Data hiding",
+                d: "Data binding",
+              },
+              correctAnswer: "c"
+            },
+          {
+              question: "16. Which of the following is not the member of class? ",
+              answers: {
+                a: "Static function",
+                b: "Friend function",
+                c: "virtual function",
+                d: "const function",
+              },
+              correctAnswer: "b"
+            },
+              {
+              question: "17.  A reference is declared using the _____ symbol. ",
+              answers: {
+                a: "&&",
+                b: "&",
+                c: "||",
+                d: "!",
+              },
+              correctAnswer: "b"
+            },
+           
+              {
+              question: " 18. Which of the following statement is correct? ",
+              answers: {
+                a: "A reference is stored on heap.",
+                b: "A reference is stored on stack.",
+                c: "A reference is stored in a queue.",
+                d: "A reference is stored in a binary tree.",
+              },
+              correctAnswer: "b"
+            },
+              {
+              question: "19. What is stderr ? ",
+              answers: {
+                a: "standard error",
+                b: "standard error types",
+                c: "standard error streams",
+                d: "standard error definitions",
+              },
+              correctAnswer: "c"
+            },
+              
+              {
+              question: "20. Which standard library function will you use to find the last occurance of a character in a string in C? ",
+              answers: {
+                a: "strnchar()",
+                b: "strchar()",
+                c: "strrchar()",
+                d: "strrchr()",
+              },
+              correctAnswer: "d"
+            }
+          ];
+        
+          // display quiz right away
+          buildQuiz();
+        
+          // on submit, show results
+          submitButton.addEventListener("click", showResults);
+        })();
+                </script>        </article>
+    
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test on Programming!!</title>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+</style>
+<body>
+        <section>
+                <span>Test on Programming!</span>
+
+                
+    
+              </section>
+             
+               
+              </header>
+              <article>
+                <h1>Instructions</h1>
+                
+                <ul class="ul-test-instruction">
+                <li>Total number of questions : <b>20</b>.</li>
+                
+                <li>Each question carry 1 mark, no negative marks.</li>
+                <li>DO NOT refresh the page.</li>
+                <li>All the best :-).</li>
+                </ul>
+    
+                <div id="quiz"></div>
+                <button id="submit" ondblclick="window.location='view222.html'">Submit Quiz</button>
+                <div id="results"></div>
+                <script>
+                (function() {
+          function buildQuiz() {
+            // we'll need a place to store the HTML output
+            const output = [];
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // we'll want to store the list of answer choices
+              const answers = [];
+        
+              // and for each available answer...
+              for (letter in currentQuestion.answers) {
+                // ...add an HTML radio button
+                answers.push(
+                  `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                  </label>`
+                );
+              }
+        
+              // add this question and its answers to the output
+              output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join("")} </div>`
+              );
+            });
+        
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join("");
+          }
+        
+          function showResults() {
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll(".answers");
+        
+            // keep track of user's answers
+            let numCorrect = 0;
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // find selected answer
+              const answerContainer = answerContainers[questionNumber];
+              const selector = `input[name=question${questionNumber}]:checked`;
+              const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        
+              // if answer is correct
+              if (userAnswer === currentQuestion.correctAnswer) {
+                // add to the number of correct answers
+                numCorrect++;
+        
+                // color the answers green
+                answerContainers[questionNumber].style.color = "lightgreen";
+              } else {
+                // if answer is wrong or blank
+                // color the answers red
+                answerContainers[questionNumber].style.color = "red";
+              }
+            });
+        
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+          }
+        
+          const quizContainer = document.getElementById("quiz");
+          const resultsContainer = document.getElementById("results");
+          const submitButton = document.getElementById("submit");
+          const myQuestions = [
+            {
+              question: " 1. What is (void*)0? ",
+              answers: {
+                a: "Representation of NULL pointer",
+                b: "Representation of void pointer",
+                c: "Error",
+                d: "None of above",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "	2. What will be the output of the program ?<br/><pre>#include<stdio.h><br/>int main()<br/>{ <br/>int i=3, *j, k;<br/>j = &i;<br/>printf(''%d\n'', i**j*i+*j);<br/>return 0;<br/>}</pre>	",
+              answers: {
+                a: "30",
+                b: "27",
+                c: "9",
+                d: "3",
+              },
+              correctAnswer: "a"
+            },
+
+       {
+              question: " 3. How will you print \n on the screen?",
+              answers: {
+                a: "printf(''\n'');",
+                b: "echo ''\\n'';",
+                c: "printf('\n');",
+                d: "printf(''\\n'');",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: " 4. If char=1, int=4, and float=4 bytes size, What will be the output of the program ?#include<stdio.h>int main(){ char ch = 'A';printf(''%d, %d, %d'', sizeof(ch), sizeof('A'), sizeof(3.14f));return 0;}",
+              answers: {
+                a: "1, 2, 4",
+                b: "1, 4, 4",
+                c: "2, 2, 4",
+                d: "2, 4, 8",
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "5.	What is the similarity between a structure, union and enumeration?",
+              answers: {
+                a: "All of them let you define new values",
+                b: "All of them let you define new data types",
+                c: "All of them let you define new pointers",
+                d: "All of them let you define new structures",
+              },
+              correctAnswer: "b"
+            },
+          {
+              question: "6. How will you free the allocated memory ? ",
+              answers: {
+                a: "remove(var-name);",
+                b: "free(var-name);",
+                c: "delete(var-name);",
+                d: "dalloc(var-name);",
+              },
+              correctAnswer: "b"
+            },
+              {
+              question: "7. Suppose that you would like to create an instance of a new Map that has an iteration order that is the same as the iteration order of an existing instance of a Map. Which concrete implementation of the Map interface should be used for the new instance?",
+              answers: {
+                a: "TreeMap",
+                b: "HashMap",
+                c: "LinkedHashMap",
+                d: "answer depends",
+              },
+              correctAnswer: ""
+            },
+           
+              {
+              question: " 8. What will be the output of the program?<br/><pre>int x = l, y = 6;<br/> while (y--)<br/>{<br/>x++; <br/>System.out.println(''x ='' + x +''y = ''+ y);<br/>}</pre> ",
+              answers: {
+                a: "x = 6 y = 0",
+                b: "x = 7 y = 0",
+                c: "x = 6 y = -1",
+                d: " Compilation fails.",
+              },
+              correctAnswer: "d"
+            },
+              {
+              question: "9. What will be the output of the program?<br/><pre>int i = l, j = -1;<br/> switch (i)<br/> {<br/>case 0, 1: j = 1; /* Line 4 */<br/>case 2: j = 2;<br/> default: j = 0;<br/> System.out.println(''j = ''+ j);<br/>}</pre> ",
+              answers: {
+                a: "j = -1",
+                b: "j = 0",
+                c: "j = 1",
+                d: "Compilation fails",
+              },
+              correctAnswer: "d"
+            },
+              
+              {
+              question: "10. After line 8 runs. how many objects are eligible for garbage collection? ",
+              answers: {
+                a: "0",
+                b: "1",
+                c: "2",
+                d: "3",
+              },
+              correctAnswer: "b"
+            },
+              
+              {
+              question: "11. Which method must be defined by a class implementing the java.lang.Runnable interface?",
+              answers: {
+                a: "void run()",
+                b: "public void run()",
+                c: "public void start()",
+                d: "void run(int)",
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "	12.	Which is true about a method-local inner class?",
+              answers: {
+                a: " It must be marked final.",
+                b: "It can be marked abstract.",
+                c: " It can be marked public.",
+                d: "It can be marked static.",
+              },
+              correctAnswer: "b"
+            },
+
+       {
+              question: " 13. Which is the valid declarations within an interface definition?",
+              answers: {
+                a: "public double methoda();",
+                b: "public final double methoda();",
+                c: "static void methoda(double d1);",
+                d: "protected void methoda(double d1);",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: " 14. Which is a valid keyword in java?",
+              answers: {
+                a: "interface",
+                b: "string",
+                c: "Float",
+                d: "unsigned",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "15. What is the numerical range of a char?",
+              answers: {
+                a: "-128 to 127",
+                b: "-(215) to (215) - 1",
+                c: "0 to 32767",
+                d: "0 to 65535",
+              },
+              correctAnswer: "d"
+            },
+          {
+              question: "16. Which is valid declaration of a float? ",
+              answers: {
+                a: " float f = 1F;",
+                b: "float f = 1.0;",
+                c: "float f = ''1'';",
+                d: "float f = 1.0d;",
+              },
+              correctAnswer: ""
+            },
+              {
+              question: "17. Which interface does java.util.Hashtable implement? ",
+              answers: {
+                a: "Java.util.Map",
+                b: "Java.util.List",
+                c: "Java.util.HashTable",
+                d: " Java.util.Collection",
+              },
+              correctAnswer: "a"
+            },
+           
+              {
+              question: " 18. What will be the output of the program?<br/><pre>public class Test <br/>{<br/>public static void leftshift(int i, int j) <br/>{<br/>i <<= j;<br/> public static void main(String args[])<br/> {<br/>int i = 4, j = 2;<br/>leftshift(i, j);<br/>System.out.printIn(i);<br/>}<br/>}<br/>}</pre> ",
+              answers: {
+                a: "2",
+                b: "4",
+                c: "8",
+                d: "16",
+              },
+              correctAnswer: "b"
+            },
+              {
+              question: "19. Which will contain the body of the thread? ",
+              answers: {
+                a: "run();",
+                b: "start();",
+                c: "stop();",
+                d: "main();",
+              },
+              correctAnswer: "a"
+            },
+              
+              {
+              question: "20. Which cannot directly cause a thread to stop executing? ",
+              answers: {
+                a: "Calling the SetPriority() method .",
+                b: "Calling the wait() method on an object.",
+                c: "Calling notify() method on an object.",
+                d: "Calling read() method on object.",
+              },
+              correctAnswer: "c"
+            }
+          ];
+        
+          // display quiz right away
+          buildQuiz();
+        
+          // on submit, show results
+          submitButton.addEventListener("click", showResults);
+        })();
+                </script>        </article>
+    
+</body>
+</html>

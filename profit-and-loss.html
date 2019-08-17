@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>profit-and-loss</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Profit&Loss!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+
+        <div class="bix-div-introduction">   
+            <p><i class="ga-fhead"  style="font-weight: 800">IMPORTANT FACTS </i></p>
+            <p><i class="ga-fhead">Cost Price:</i></p>
+            <p>The price, at which an article is purchased, is called its <i class="ga-def">cost price</i>, abbreviated as <i class="ga-def">C.P.</i></p>
+            <p><i class="ga-fhead">Selling Price:</i></p>
+            <p>The price, at which an article is sold, is called its <i class="ga-def">selling prices</i>, abbreviated as <i class="ga-def">S.P.</i></p>
+            <p><i class="ga-fhead">Profit or Gain:</i></p>
+            <p>If S.P. is greater than C.P., the seller is said to have a <i class="ga-def">profit</i> or <i class="ga-def">gain</i>.</p>
+            <p><i class="ga-fhead">Loss:</i></p>
+            <p>If S.P. is less than C.P., the seller is said to have incurred a <i class="ga-def">loss</i>.</p>
+            <p><i class="ga-fhead">IMPORTANT FORMULAE</i></p>  
+            <ol type="1">  
+            <li>
+            <p>Gain = (S.P.) - (C.P.)</p>
+            </li>
+            <li>
+            <p>Loss = (C.P.) - (S.P.)</p>
+            </li>
+            <li>
+            <p>Loss or gain is always reckoned on C.P.</p>
+            </li>
+            <li>
+            <p>Gain Percentage: (Gain %)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; Gain % =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident">Gain x 100</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">C.P.</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>Loss Percentage: (Loss %)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; Loss % =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident">Loss x 100</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">C.P.</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>Selling Price: (S.P.)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; SP =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                <td class="ga-td-divident">(100 + Gain %)</td>
+                <td class="ga-td-line-lpad" rowspan="2">x C.P</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif"></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">100</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>Selling Price: (S.P.)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; SP =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                <td class="ga-td-divident">(100 - Loss %)</td>
+                <td class="ga-td-line-lpad" rowspan="2">x C.P.</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif"></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">100</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>Cost Price: (C.P.)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; C.P. =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                <td class="ga-td-divident">100</td>
+                <td class="ga-td-line-lpad" rowspan="2">x S.P.</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif"></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">(100 + Gain %)</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>Cost Price: (C.P.)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; C.P. =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                <td class="ga-td-divident">100</td>
+                <td class="ga-td-line-lpad" rowspan="2">x S.P.</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif"></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">(100 - Loss %)</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>If an article is sold at a gain of say 35%, then S.P. = 135% of C.P.</p>
+            </li>
+            <li>
+            <p>If an article is sold at a loss of say, 35% then S.P. = 65% of C.P.</p>
+            </li>
+            <li>
+            <p>When a person sells two similar items, one at a gain of say <i class="ga-var">x</i>%, and the other at a loss of <i class="ga-var">x</i>%, then the seller always incurs a loss given by:
+                </p><p><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                       <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; Loss % =</td>
+                       <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                       <td class="ga-td-divident">Common Loss and Gain %</td>
+                       <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                       <td class="ga-td-upline" rowspan="2">2</td>
+                       <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                       <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                       <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                       <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                       <td class="ga-td-upline" rowspan="2">2</td>
+                       <td class="ga-td-line" rowspan="2">.</td>
+                    </tr>
+                    <tr class="ga-tr-divisor" align="center">
+                       <td class="ga-td-divisor">10</td>
+                       <td class="ga-td-divisor">10</td>
+                    </tr> 
+                   </tbody></table>
+                   </p>
+            <p></p>
+            </li>
+            <li>
+            <p>If a trader professes to sell his goods at cost price, but uses false weights, then
+                </p><p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; Gain % =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                    <td class="ga-td-divident">Error</td>
+                    <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif">%.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">(True Value) - (Error)</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+            <p></p>
+            </li>
+            </ol>
+            </div>
+    </div>
+    <div class="scp-quizzes-data">
+  <h4>1. A vendor bought toffees at 6 for a rupee. How many for a rupee must he sell to gain 20%?</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) 3</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="C">
+       <label for="C">(B) 5</label><br/>
+        
+    <input type="radio"  name="question1">
+       <label >(C) 4</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 6</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+              <li class="list-group-item">Ans: (B)</li><br>
+              <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+            <div class="bix-ans-description"> <p>C.P. of 6 toffees = Re. 1</p>
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2">S.P. of 6 toffees = 120% of Re. 1 = Rs.</td>
+                  <td class="ga-td-divident">6</td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor">5</td>
+               </tr> 
+              </tbody></table>
+              </p>
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2">For Rs.</td>
+                  <td class="ga-td-divident">6</td>
+                  <td class="ga-td-line-lrpad" rowspan="2">, toffees sold = 6.</td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor">5</td>
+               </tr> 
+              </tbody></table>
+              </p>
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2">For Re. 1, toffees sold =</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                  <td class="ga-td-line-rpad" rowspan="2">6 x</td>
+                  <td class="ga-td-divident">5</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                  <td class="ga-td-line-lrpad" rowspan="2">= 5.</td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor">6</td>
+               </tr> 
+              </tbody></table>
+              </p>
+              </div>
+          </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2.If selling price is doubled, the profit triples. Find the profit percent.</h4>
+        <br/>
+   
+        <input type="radio"  name="question1">
+       <label  >(A) 66(2/3)</label>&nbsp;&nbsp;
+        
+    <input type="radio" id="a" name="question1">
+       <label for="a">(B) 100</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 105(1/3)</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label >(D) 200</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+               <p>Let C.P. be Rs. <i class="ga-var">x</i> and S.P. be Rs. <i class="ga-var">y</i>. </p>
+              <p>Then, 3(<i class="ga-var">y</i> - <i class="ga-var">x</i>) = (2<i class="ga-var">y</i> - <i class="ga-var">x</i>) &nbsp;&nbsp;<img src="images/aptitude/1-sym-imp.gif">  <i class="ga-var">y</i> = 2<i class="ga-var">x</i>.</p>
+              <p>Profit = Rs. (<i class="ga-var">y</i> - <i class="ga-var">x</i>) = Rs. (2<i class="ga-var">x</i> - <i class="ga-var">x</i>) = Rs. <i class="ga-var">x</i>.</p>
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Profit % =</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                  <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                  <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 100%</td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+               </tr> 
+              </tbody></table>
+              </p>
+              </div> 
+          </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. Alfred buys an old scooter for Rs. 4700 and spends Rs. 800 on its repairs. If he sells the scooter for Rs. 5800, his gain percent is:</p></h4>
+         
+         <input type="radio"  name="question1">
+       <label >(A) <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+          <tbody><tr class="ga-tr-divident" align="center">
+             <td class="ga-td-line" rowspan="2">4</td>
+             <td class="ga-td-divident">4</td>
+             <td class="ga-td-line" rowspan="2">%</td>
+          </tr>
+          <tr class="ga-tr-divisor" align="center">
+             <td class="ga-td-divisor">7</td>
+          </tr> 
+         </tbody></table></label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="b">
+       <label for="b">(B) <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+          <tbody><tr class="ga-tr-divident" align="center">
+             <td class="ga-td-line" rowspan="2">5</td>
+             <td class="ga-td-divident">5</td>
+             <td class="ga-td-line" rowspan="2">%</td>
+          </tr>
+          <tr class="ga-tr-divisor" align="center">
+             <td class="ga-td-divisor">11</td>
+          </tr> 
+         </tbody></table></label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 10 %</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label>(D) 12 %</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+             <div class="bix-ans-description"> <p>Cost Price (C.P.) = Rs. (4700 + 800) = Rs. 5500.</p>
+              <p>Selling Price (S.P.) = Rs. 5800.</p>
+              
+              <p>Gain = (S.P.) - (C.P.) = Rs.(5800 - 5500) = Rs. 300.</p>
+              
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2">Gain % =</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                  <td class="ga-td-divident">300</td>
+                  <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">%</td>
+                  <td class="ga-td-line-lpad" rowspan="2">= 5</td>
+                  <td class="ga-td-divident">5</td>
+                  <td class="ga-td-line-rpad" rowspan="2">%</td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor">5500</td>
+                  <td class="ga-td-divisor">11</td>
+               </tr> 
+              </tbody></table>
+              
+              </p>
+              </div>
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+      <h4>4. The cost price of 20 articles is the same as the selling price of x articles. If the profit is 25%, then the value of x is:</h4>
+
+    <input type="radio"  name="question1">
+       <label >(A) 15</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" >
+       <label >(B) 18</label><br/>
+        
+    <input type="radio" name="question1" id="B">
+       <label for="B">(C) 16</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label >(D) 25</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>Let C.P. of each article be Re. 1 C.P. of <i class="ga-var">x</i> articles = Rs. <i class="ga-var">x</i>.</p>
+              <p>S.P. of <i class="ga-var">x</i> articles = Rs. 20.</p>
+              <p>Profit = Rs. (20 - <i class="ga-var">x</i>).</p>
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                  <td class="ga-td-divident">20 - <i class="ga-var">x</i></td>
+                  <td class="ga-td-line-lrpad" rowspan="2">x 100 = 25</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+               </tr> 
+              </tbody></table>
+              </p>
+              <p><img src="images/aptitude/1-sym-imp.gif"> 2000 - 100<i class="ga-var">x</i> = 25<i class="ga-var">x</i></p>
+              <p>125<i class="ga-var">x</i> = 2000</p>
+              <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 16.</p>
+              </div>
+            </ul>
+      </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4>5. In a certain store, the profit is 320% of the cost. If the cost increases by 25% but the selling price remains constant, approximately what percentage of the selling price is the profit?</h4>
+      <input type="radio"  name="question1" id="A">
+        <label for="A">(A) 70 %</label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1">
+         <label>(B) 30 %</label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) 100 %</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1">
+         <label>(D) 250 %</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>Let C.P.= Rs. 100. Then, Profit = Rs. 320, S.P. = Rs. 420.</p>
+              <p>New C.P. = 125% of Rs. 100 = Rs. 125</p>
+              <p>New S.P. = Rs. 420.</p>
+              <p>Profit = Rs. (420 - 125) = Rs. 295.</p>
+              <p>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+               <tbody><tr class="ga-tr-divident" align="center">
+                  <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Required percentage =</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                  <td class="ga-td-divident">295</td>
+                  <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                  <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">%</td>
+                  <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                  <td class="ga-td-divident">1475</td>
+                  <td class="ga-td-line" rowspan="2">% = 70% (approximately).</td>
+               </tr>
+               <tr class="ga-tr-divisor" align="center">
+                  <td class="ga-td-divisor">420</td>
+                  <td class="ga-td-divisor">21</td>
+               </tr> 
+              </tbody></table>
+              </p>
+              </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. The percentage profit earned by selling an article for Rs. 1920 is equal to the percentage loss incurred by selling the same article for Rs. 1280. At what price should the article be sold to make 25% profit?</p>
+         	
+        <input type="radio"  name="question1" id="f">
+          <label for="f">(A) 2000</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 2200</label><br/>
+     
+        <input type="radio" name="question1">
+          <label>(C) 2400</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) Data inadequate</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (A)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> <p>Let C.P. be Rs. <i class="ga-var">x</i>.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then,</td>
+                    <td class="ga-td-divident">1920 - <i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">x 100 =</td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i> - 1280</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">x 100</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 1920 - <i class="ga-var">x</i> = <i class="ga-var">x</i> - 1280</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 2<i class="ga-var">x</i> = 3200</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 1600</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Required S.P. = 125% of Rs. 1600 = Rs.</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">125</td>
+                    <td class="ga-td-line-lpad" rowspan="2">x 1600</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= Rs 2000.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">100</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                </div>
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7. A man buys a cycle for Rs. 1400 and sells it at a loss of 15%. What is the selling price of the cycle? </p>
+
+        <input type="radio"  name="question1">
+          <label >(A)Rs. 1090</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) Rs. 1160</label><br/>
+     
+        <input type="radio" name="question1" id="e">
+          <label for="e">(C) Rs. 1190</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) Rs. 1202</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (C)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> <p>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line-rpad" rowspan="2">S.P. = 85% of Rs. 1400 = Rs.</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                      <td class="ga-td-divident">85</td>
+                      <td class="ga-td-line-lpad" rowspan="2">x 1400</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                      <td class="ga-td-line-lrpad" rowspan="2">= Rs. 1190</td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor">100</td>
+                   </tr> 
+                  </tbody></table>
+                  </p>
+                  </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8. Some articles were bought at 6 articles for Rs. 5 and sold at 5 articles for Rs. 6. Gain percent is? </p>
+  
+          <input type="radio"  name="question1">
+            <label >(A) 30 %</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1" >
+            <label >(B) 33(1/5) %</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 40 %</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" id="d" >
+            <label for="d">(D) 44 %</label> 
+         
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (D)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> <p>Suppose, number of articles bought = L.C.M. of 6 and 5 = 30.</p>
+                  <p>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line-rpad" rowspan="2">C.P. of 30 articles = Rs.</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                      <td class="ga-td-divident">5</td>
+                      <td class="ga-td-line-lpad" rowspan="2">x 30</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                      <td class="ga-td-line-lrpad" rowspan="2">= Rs. 25.</td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor">6</td>
+                   </tr> 
+                  </tbody></table>
+                  </p>
+                  <p>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line-rpad" rowspan="2">S.P. of 30 articles = Rs.</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                      <td class="ga-td-divident">6</td>
+                      <td class="ga-td-line-lpad" rowspan="2">x 30</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                      <td class="ga-td-line-lrpad" rowspan="2">= Rs. 36.</td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor">5</td>
+                   </tr> 
+                  </tbody></table>
+                  </p>
+                  <p>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Gain % =</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                      <td class="ga-td-divident">11</td>
+                      <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 44%.</td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor">25</td>
+                   </tr> 
+                  </tbody></table>
+                  </p> </div>
+              </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9. A trader mixes 26 kg of rice at Rs. 20 per kg with 30 kg of rice of other variety at Rs. 36 per kg and sells the mixture at Rs. 30 per kg. His profit percent is: </p>
+    
+            <input type="radio"  name="question1">
+              <label >(A)No  profit,no loss</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" id="h">
+              <label for="h">(B) 5 %</label><br/>
+         
+            <input type="radio" name="question1" >
+              <label >(C) 8 %</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1">
+              <label>(D) None of these</label>
+
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (B)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> 
+                      <p>C.P. of 56 kg rice = Rs. (26 x 20 + 30 x 36) = Rs. (520 + 1080) = Rs. 1600.</p>
+                      <p>S.P. of 56 kg rice = Rs. (56 x 30) = Rs. 1680.</p>
+                      <p>
+                      <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                       <tbody><tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Gain =</td>
+                          <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                          <td class="ga-td-divident">80</td>
+                          <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                          <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 5%.</td>
+                       </tr>
+                       <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">1600</td>
+                       </tr> 
+                      </tbody></table>
+                      </p>
+                       </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10. Sam purchased 20 dozens of toys at the rate of Rs. 375 per dozen. He sold each one of them at the rate of Rs. 33. What was his percentage profit? </p>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 3.5</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" >
+                <label>(B) 4.5</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) 6.5</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1" id="h" >
+                <label for="h">(D) 5.6</label>
+  
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (D)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">Cost Price of 1 toy = Rs.</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident">375</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-line-lrpad" rowspan="2">= Rs. 31.25</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">12</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        <p>Selling Price of 1 toy = Rs. 33</p>
+                        <p>So, Gain = Rs. (33 - 31.25) = Rs. 1.75</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Profit % =</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident">1.75</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">x 100</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">%</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                            <td class="ga-td-divident">28</td>
+                            <td class="ga-td-line-rpad" rowspan="2">% = 5.6%</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">31.25</td>
+                            <td class="ga-td-divisor">5</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        </div>
+                  </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1 style="font-weight: bold">Watch Vedio:</h1>
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/UmEX3FE0jSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
+     
+    
+    
+</body>
+</html>
+  
+

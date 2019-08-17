@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcendar</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+    
+  .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+i.ga-bar, i.ga-def, i.ga-fhead {
+    font-style: normal;
+    font-weight: 600;
+}
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+.bix-div-introduction p {
+    margin-top: 15px;
+}
+.bix-div-introduction p {
+    line-height: 1.7;
+    font-family: arial;
+}
+.bix-ans-description p
+    {
+        font-family: arial;
+        font-size: medium;
+    }
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Calcendar!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+      <h3 style="font-weight: bold">Important Formulas:</h3>
+      <div class="bix-div-introduction">   
+        <ol type="1">  
+        <li>
+        <p><i class="ga-fhead">Odd Days:</i></p>
+        <p>We are supposed to find the day of the week on a given date.</p>
+        <p>For this, we use the concept of 'odd days'.</p>
+        <p>In a given period, the number of days more than the complete weeks are called <i class="ga-def">odd days</i>.</p>
+        </li>
+        <li>
+        <p><i class="ga-fhead">Leap Year:</i></p>
+        <p>(i). Every year divisible by 4 is a leap year, if it is not a century.</p>
+        <p>(ii). Every 4<sup>th</sup> century is a leap year and no other century is a leap year.</p>
+        <p>Note: <i class="ga-def">A leap year has 366 days.</i></p>
+        <p><i class="ga-fhead">Examples:</i></p>
+        <ol type="i">
+            <li><p>Each of the years 1948, 2004, 1676 etc. is a leap year.</p></li>
+            <li><p>Each of the years 400, 800, 1200, 1600, 2000 etc. is a leap year.</p></li>
+            <li><p>None of the years 2001, 2002, 2003, 2005, 1800, 2100 is a leap year.</p></li>
+        </ol>
+        </li>
+        <li>
+        <p><i class="ga-fhead">Ordinary Year:</i></p>
+        <p>The year which is not a leap year is called an <i class="ga-def">ordinary years</i>. An ordinary year has 365 days.</p>
+        </li>
+        <li>
+        <p><i class="ga-fhead">Counting of Odd Days:</i></p>
+        <ol>
+            <li>
+                <p>1 ordinary year = 365 days = (52 weeks  + 1 day.)</p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> 1 ordinary year has 1 odd day.</p>
+            </li>
+            <li>
+                <p>1 leap year = 366 days = (52 weeks + 2 days)</p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> 1 leap year has 2 odd days.</p>
+            </li>
+            <li>
+                <p>100 years = 76 ordinary years + 24 leap years</p>
+                <p> &nbsp; = (76 x 1 + 24 x 2) odd days = 124 odd days.</p>
+                <p> &nbsp; = (17 weeks + days) <img src="images/aptitude/1-sym-deq.gif"> 5 odd days.</p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> Number of odd days in 100 years = 5.</p>
+                <p>Number of odd days in 200 years = (5 x 2) <img src="images/aptitude/1-sym-deq.gif"> 3 odd days.</p>
+                <p>Number of odd days in 300 years = (5 x 3) <img src="images/aptitude/1-sym-deq.gif"> 1 odd day.</p>
+                <p>Number of odd days in 400 years = (5 x 4 + 1) <img src="images/aptitude/1-sym-deq.gif"> 0 odd day.</p>
+                <p>Similarly, each one of 800 years, 1200 years, 1600 years, 2000 years etc. has 0 odd days.</p>
+            </li>
+        </ol>
+        </li>
+        <li>
+        <p><i class="ga-fhead">Day of the Week Related to Odd Days:</i></p>
+        <p>
+        <table cellpadding="5" cellspacing="0" border="0" style="font-family:inherit; font-size:inherit; border: 1px solid #ccc;">
+            <tbody><tr><td style="border-bottom: 1px solid #ccc">No. of days:</td><td style="border-bottom: 1px solid #ccc">0</td><td style="border-bottom: 1px solid #ccc">1</td><td style="border-bottom: 1px solid #ccc">2</td><td style="border-bottom: 1px solid #ccc">3</td><td style="border-bottom: 1px solid #ccc">4</td><td style="border-bottom: 1px solid #ccc">5</td><td style="border-bottom: 1px solid #ccc">6</td></tr>
+            <tr><td>Day:</td><td>Sun.</td><td>Mon.</td><td>Tues.</td><td>Wed.</td><td>Thurs.</td><td>Fri.</td><td>Sat.</td></tr>
+        </tbody></table>
+        </p>
+        </li>
+        </ol>
+        </div>
+    </div>
+    <h3>General Questions:</h3>
+    <div class="scp-quizzes-data">
+  <h4>1.It was Sunday on Jan 1, 2006. What was the day of the week Jan 1, 2010?</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) Sunday</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) Saturday</label><br/>
+        
+    <input type="radio" id="C" name="question1">
+       <label for="C">(C) Friday</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) WednesdayS</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> 
+                    <p>On 31<sup>st</sup> December, 2005 it was Saturday.</p>
+                    <p>Number of odd days from the year 2006 to the year 2009 = (1 + 1 + 2 + 1) = 5 days.</p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> On 31<sup>st</sup> December 2009, it was Thursday.</p>
+                    <p>Thus, on 1<sup>st</sup> Jan, 2010 it is Friday.</p>
+                     </div>
+              </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2.What was the day of the week on 17th June, 1998?</h4>
+        <br/>
+   
+        <input type="radio"  name="question1" id="a">
+       <label for="a" >(A) Wednesday</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) Monday</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) Thursday</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label >(D) Tuesday</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>17<sup>th</sup> June, 1998 = (1997 years + Period from 1.1.1998 to 17.6.1998)</p>
+              <p>Odd days in 1600 years = 0</p>
+              <p>Odd days in 300 years = (5 x 3) <img src="images/aptitude/1-sym-deq.gif"> 1</p>
+              <p>97 years has 24 leap years + 73 ordinary years.</p>
+              <p>Number of odd days in 97 years ( 24 x 2 + 73) = 121 = 2 odd days.</p>
+              <p>
+              </p><pre class="ga-pre-gen">Jan.  Feb.   March    April    May      June 
+              (31 +  28  +  31   +   30   +   31   +   17) = 168 days
+              </pre>
+              <p></p>
+              <p><img src="images/aptitude/1-sym-tfr.gif"> 168 days = 24 weeks = 0 odd day.</p>
+              <p>Total number of odd days = (0 + 1 + 2 + 0) = 3.</p>
+              <p>Given day is Wednesday.</p>
+               </div>
+            </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. What was the day of the week on 28th May, 2006?</p></h4>
+         
+         <input type="radio"  name="question1">
+       <label >(A) Thursday</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) Friday</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) Saturday</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" id="b" >
+       <label for="b">(D) Sunday</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (D)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+             <div class="bix-ans-description"> 
+                <p>28 May, 2006 = (2005 years + Period from 1.1.2006 to 28.5.2006)</p>
+                <p>Odd days in 1600 years = 0</p>
+                <p>Odd days in 400 years = 0</p>
+                <p>5 years = (4 ordinary years + 1 leap year) = (4 x 1 + 1 x 2) <img src="images/aptitude/1-sym-deq.gif"> 6 odd days</p>
+                <p>
+                </p><pre class="ga-pre-gen">Jan.  Feb.   March    April    May 
+                (31 +  28  +  31   +   30   +   28 ) = 148 days
+                </pre>
+                <p></p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> 148 days = (21 weeks + 1 day) <img src="images/aptitude/1-sym-deq.gif"> 1 odd day.</p>
+                <p>Total number of odd days = (0 + 0 + 6 + 1) = 7 <img src="images/aptitude/1-sym-deq.gif"> 0 odd day.</p>
+                <p>Given day is Sunday.</p>
+                 </div> 
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+          <h4>4. Today is Monday. After 61 days, it will be:</h4>
+          
+    <input type="radio"  name="question1">
+       <label >(A) Wednesday</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="B">
+       <label for="B">(B) Saturdays</label><br/>
+        
+    <input type="radio" name="question1" >
+       <label>(C) Tuesday</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) Thursday</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <p>Each day of the week is repeated after 7 days.</p>
+                <p>So, after 63 days, it will be Monday.</p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> After 61 days, it will be Saturday.</p>
+                 </div>
+            </ul>
+      </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4>5. If 6th March, 2005 is Monday, what was the day of the week on 6th March, 2004?</h4>
+      <input type="radio"  name="question1" id="A">
+        <label for="A">(A) Sunday</label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1">
+         <label>(B) Saturday</label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) Wednesday</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1">
+         <label>(D) Friday</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+            <div class="bix-ans-description"> <p>The year 2004 is a leap year. So, it has 2 odd days.</p>
+
+              <p>But, Feb 2004 not included because we are calculating from March 2004 to March 2005. So it has 1 odd day only.</p> 
+              
+              <p><img src="images/aptitude/1-sym-tfr.gif"> The day on 6<sup>th</sup> March, 2005 will be 1 day beyond the day on 6<sup>th</sup> March, 2004.</p>
+              
+              <p>Given that, 6<sup>th</sup> March, 2005 is Monday.</p>
+              
+              <p><img src="images/aptitude/1-sym-tfr.gif"> 6<sup>th</sup> March, 2004 is Sunday (1 day before to 6<sup>th</sup> March, 2005).</p> 
+            </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. How many days are there in <i class="ga-var">x</i> weeks <i class="ga-var">x</i> days?</p></h4>
+         	
+        <input type="radio"  name="question1">
+          <label >(A) <td class="bix-td-option" width="99%" id="tdOptionDt_A_637">7<i class="ga-var">x</i><sup>2</sup></td></label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" id="f">
+          <label for="f" >(B) 8<i class="ga-var">x</i></label><br/>
+     
+        <input type="radio" name="question1" >
+          <label>(C) 14 <i class="ga-var">x</i></label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) 7</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (B)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> 
+                  <p><i class="ga-var">x</i> weeks <i class="ga-var">x</i> days = (7<i class="ga-var">x</i> + <i class="ga-var">x</i>) days = 8<i class="ga-var">x</i> days.</p>
+              </div>
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7. 	On what dates of April, 2001 did Wednesday fall?</p></h4>
+
+        <input type="radio"  name="question1">
+          <label >(A) <td class="bix-td-option" width="99%" id="tdOptionDt_A_630">1<sup>st</sup>, 8<sup>th</sup>, 15<sup>th</sup>, 22<sup>nd</sup>, 29<sup>th</sup></td></label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) <td class="bix-td-option" width="99%" id="tdOptionDt_B_630">2<sup>nd</sup>, 9<sup>th</sup>, 16<sup>th</sup>, 23<sup>rd</sup>, 30<sup>th</sup></td></label><br/>
+     
+        <input type="radio" name="question1">
+          <label>(C) <td class="bix-td-option" width="99%" id="tdOptionDt_C_630">3<sup>rd</sup>, 10<sup>th</sup>, 17<sup>th</sup>, 24<sup>th</sup></td>
+          </label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" id="e" >
+          <label for="e">(D) <td class="bix-td-option" width="99%" id="tdOptionDt_D_630">4<sup>th</sup>, 11<sup>th</sup>, 18<sup>th</sup>, 25<sup>th</sup></td>
+          </label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (D)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> 
+                  We shall find the day on 1<sup>st</sup> April, 2001.
+                  <p>1<sup>st</sup> April, 2001 = (2000 years + Period from 1.1.2001 to 1.4.2001)</p>
+                  <p>Odd days in 1600 years = 0</p>
+                  <p>Odd days in 400 years = 0</p>
+                  <p>
+                  Jan. Feb. March April<br>
+                  (31 + 28 + 31  +  1) &nbsp; &nbsp; = 91 days <img src="./Calendar - Aptitude Questions and Answers Page 2_files/1-sym-deq.gif"> 0 odd days.
+                  </p>
+                  <p>Total number of odd days = (0 + 0 + 0) = 0</p>
+                  <p>On 1<sup>st</sup> April, 2001 it was Sunday.</p>
+                  <p>In April, 2001 Wednesday falls on 4<sup>th</sup>, 11<sup>th</sup>, 18<sup>th</sup> and 25<sup>th</sup>.</p>
+              </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8.The calendar for the year 2007 will be the same for the year?</p></h4>
+  
+          <input type="radio"  name="question1">
+            <label >(A) 2016</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1" id="d" >
+            <label for="d">(B) 2018</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 2014</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" >
+            <label>(D) 2017</label> 
+
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (C)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> 
+                    <p>Count the number of odd days from the year 2007 onwards to get the sum equal to 0 odd day.</p>
+                    <p>
+                    </p><pre class="ga-pre-gen">Year    : 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017
+                    Odd day : 1    2    1    1    1    2    1    1    1    2    1    
+                    </pre>
+                    <p></p>
+                    <p>Sum = 14 odd days <img src="images/aptitude/1-sym-deq.gif"> 0 odd days.</p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> Calendar for the year 2018 will be the same as for the year 2007.</p>
+                </div>
+              </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9. Which of the following is not a leap year? </p>
+    
+            <input type="radio"  name="question1" id="g"> 
+              <label for="g" >(A) 700</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" >
+              <label>(B) 800</label><br/>
+         
+            <input type="radio" name="question1" >
+              <label >(C) 1200</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1"  >
+              <label>(D) 2000</label>
+
+        
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (A)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> 
+                      <p>The century divisible by 400 is a leap year.</p>
+                      <p><img src="images/aptitude/1-sym-tfr.gif"> The year 700 is not a leap year.</p>
+                  </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10. January 1, 2007 was Monday. What day of the week lies on Jan. 1, 2008? </p></h4>
+      
+              <input type="radio"  name="question1">
+                <label >(A) Monday</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" id="h" >
+                <label for="h">(B) Tuesday</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) Wednesday</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1">
+                <label >(D) Thursday</label>
+  
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (B)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                        <p>The year 2007 is an ordinary year. So, it has 1 odd day. </p>
+                        <p>1<sup>st</sup> day of the year 2007 was Monday.   </p>
+                        <p>1<sup>st</sup> day of the year 2008 will be 1 day beyond Monday.</p>
+                        <p>Hence, it will be Tuesday.</p>
+                    </div>
+                  </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1>Watch Vedio</h1>
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/mLD41elDRTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
+     
+    
+    
+</body>
+</html>
+	

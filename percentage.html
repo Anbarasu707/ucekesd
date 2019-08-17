@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Percentage</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+    /* display formulas correctly*/
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Percentage!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+        
+        <div class="bix-div-introduction"> 
+            <h2 style="font-weight: bold">Basic Formulas:</h2>  
+        <ol type="1">  
+        <li>
+            <p><i class="ga-fhead">Concept of Percentage:</i></p>
+            <p>By a certain <i class="ga-def">percent</i>, we mean that many hundredths.</p>
+            <p>Thus, <i class="ga-var">x</i> percent means <i class="ga-var">x</i> hundredths, written as <i class="ga-var">x</i>%.</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">To express <i class="ga-var">x</i>% as a fraction: We have, <i class="ga-var">x</i>% =</td>
+                <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                <td class="ga-td-line" rowspan="2">.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">100</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; Thus, 20% =</td>
+                <td class="ga-td-divident">20</td>
+                <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line" rowspan="2">.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">100</td>
+                <td class="ga-td-divisor">5</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">To express</td>
+                <td class="ga-td-divident"><i class="ga-var">a</i></td>
+                <td class="ga-td-line-lrpad" rowspan="2">as a percent: We have,</td>
+                <td class="ga-td-divident"><i class="ga-var">a</i></td>
+                <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident"><i class="ga-var">a</i></td>
+                <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">%.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor"><i class="ga-var">b</i></td>
+                <td class="ga-td-divisor"><i class="ga-var">b</i></td>
+                <td class="ga-td-divisor"><i class="ga-var">b</i></td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">&nbsp; &nbsp; Thus,</td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">%</td>
+                <td class="ga-td-line-lrpad" rowspan="2">= 25%.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">4</td>
+                <td class="ga-td-divisor">4</td>
+             </tr> 
+            </tbody></table>
+            </p>
+        </li>
+        <li>
+            <p><i class="ga-fhead">Percentage Increase/Decrease:</i></p>
+            <p>If the price of a commodity increases by R%, then the reduction in consumption so as not to increase the expenditure is:
+                </p><p align="center">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                        <td class="ga-td-divident">R</td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif">%</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">(100 + R)</td>
+                     </tr> 
+                    </tbody></table>
+                </p>
+            <p></p>
+            <p>If the price of a commodity decreases by R%, then the increase in consumption so as not to decrease the expenditure is:
+                </p><p align="center">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                        <td class="ga-td-divident">R</td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif">%</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">(100 - R)</td>
+                     </tr> 
+                    </tbody></table>
+                </p>
+            <p></p>
+        </li>
+        <li>
+            <p><i class="ga-fhead">Results on Population:</i></p>
+            <p>Let the population of a town be P now and suppose it increases at the rate of R% per annum, then:</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">1. Population after <i class="ga-var">n</i> years = P</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-line-rpad" rowspan="2">1 +</td>
+                <td class="ga-td-divident">R</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-upline" rowspan="2">n</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">100</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">2. Population <i class="ga-var">n</i> years ago =</td>
+                <td class="ga-td-divident">P</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-line-rpad" rowspan="2">1 +</td>
+                        <td class="ga-td-divident">R</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-upline" rowspan="2">n</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">100</td>
+                     </tr> 
+                    </tbody></table>
+                </td>
+             </tr> 
+            </tbody></table>
+            </p>
+        </li>
+        <li>
+            <p><i class="ga-fhead">Results on Depreciation:</i></p>
+            <p>Let the present value of a machine be P. Suppose it depreciates at the rate of R% per annum. Then:</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">1. Value of the machine after <i class="ga-var">n</i> years = P</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-line-rpad" rowspan="2">1 -</td>
+                <td class="ga-td-divident">R</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-upline" rowspan="2">n</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">100</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">2. Value of the machine <i class="ga-var">n</i> years ago =</td>
+                <td class="ga-td-divident">P</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-line-rpad" rowspan="2">1 -</td>
+                            <td class="ga-td-divident">R</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-upline" rowspan="2">n</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor">100</td>
+                         </tr> 
+                        </tbody></table>
+                </td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">3. If A is R% more than B, then B is less than A by</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                <td class="ga-td-divident">R</td>
+                <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif">%.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">(100 + R)</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">4. If A is R% less than B, then B is more than A by</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-obracket-h1.gif"></td>
+                <td class="ga-td-divident">R</td>
+                <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cbracket-h1.gif">%.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">(100 - R)</td>
+             </tr> 
+            </tbody></table>
+            </p>
+        </li>
+        </ol>
+        </div>
+    </div>
+    <h3 style="font-weight: bold">Percentage - General Questions:</h3>
+    <div class="scp-quizzes-data">
+  <h4>1. What percentage of numbers from 1 to 70 have 1 or 9 in the unit's digit?</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) 1</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 14</label><br/>
+        
+    <input type="radio" id="C" name="question1">
+       <label for="C">(C) 20</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 21</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> <p>Clearly, the numbers which have 1 or 9 in the unit's digit, have squares that end in the digit 1. Such numbers from 1 to 70 are 1, 9, 11, 19, 21, 29, 31, 39, 41, 49, 51, 59, 61, 69.</p>
+                    <p>Number of such number =14</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"> Required percentage =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">14</td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 20%.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">70</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>                    
+                </div>
+          </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2. A batsman scored 110 runs which included 3 boundaries and 8 sixes. What percent of his total score did he make by running between the wickets?</h4>
+   
+        <input type="radio"  name="question1">
+       <label><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+            <tbody><tr class="ga-tr-divident" align="center" style="font-size: large">
+               <td class="ga-td-line" rowspan="2">(A) 45</td>
+               <td class="ga-td-line" rowspan="2">%</td>
+            </tr>
+           </tbody></table></label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="a">
+       <label for="a"><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+            <tbody><tr class="ga-tr-divident" align="center" style="font-size: large">
+               <td class="ga-td-line" rowspan="2">(B) 45</td>
+               <td class="ga-td-divident">5</td>
+               <td class="ga-td-line" rowspan="2">%</td>
+            </tr>
+            <tr class="ga-tr-divisor" align="center">
+               <td class="ga-td-divisor">11</td>
+            </tr> 
+           </tbody></table></label><br/>
+        
+    <input type="radio" name="question1">
+       <label><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+            <tbody><tr class="ga-tr-divident" align="center">
+               <td class="ga-td-line" rowspan="2">(C) 54</td>
+               <td class="ga-td-divident">6</td>
+               <td class="ga-td-line" rowspan="2">%</td>
+            </tr>
+            <tr class="ga-tr-divisor" align="center">
+               <td class="ga-td-divisor">11</td>
+            </tr> 
+           </tbody></table></label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label ><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+            <tbody><tr class="ga-tr-divident" align="center" style="font-size: large">
+               <td class="ga-td-line" rowspan="2">(D) 55</td>
+               <td class="ga-td-line" rowspan="2">%</td>
+            </tr>
+           </tbody></table></label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>Number of runs made by running = 110 - (3 x 4 + 8 x 6)</p>
+                <p>= 110 - (60)</p>
+                <p>= 50.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"> Required percentage =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">50</td>
+                    <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 45</td>
+                    <td class="ga-td-divident">5</td>
+                    <td class="ga-td-line" rowspan="2">%</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">110</td>
+                    <td class="ga-td-divisor">11</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                
+        </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. A fruit seller had some apples. He sells 40% apples and still has 420 apples. Originally, he had:</p></h4>
+         
+         <input type="radio"  name="question1">
+       <label >(A) 588 apples</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label >(B) 600 apples</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 672 apples</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" id="b">
+       <label for="b">(D) 700 apples</label> 
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (D)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+              <p>Suppose originally he had <i class="ga-var">x</i> apples.</p>
+                <p>Then, (100 - 40)% of <i class="ga-var">x</i> = 420.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                    <td class="ga-td-divident">60</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">x <i class="ga-var">x</i> = 420</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">100</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">420 x 100</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">&nbsp; = 700.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">60</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                
+              
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+          <h4>4. If 20% of a = b, then b% of 20 is the same as:</h4>
+          
+    <input type="radio"  name="question1" id="B">
+       <label for="B">(A) 4% of a</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 5% of a</label><br/>
+        
+    <input type="radio" name="question1" >
+       <label>(C) 20% of a</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) None of these</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">20% of <i class="ga-var">a</i> = <i class="ga-var">b</i>&nbsp;&nbsp; <img src="images/aptitude/1-sym-imp.gif"> &nbsp;&nbsp;</td>
+                        <td class="ga-td-divident">20</td>
+                        <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> = <i class="ga-var">b</i>.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">100</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"> <i class="ga-var">b</i>% of 20 =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident"><i class="ga-var">b</i></td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 20</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">20</td>
+                        <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> x</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 20</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">4</td>
+                        <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">a</i> = 4% of <i class="ga-var">a</i>.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">100</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+            </div>
+          </ul>
+      </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4>5. Two numbers A and B are such that the sum of 5% of A and 4% of B is two-third of the sum of 6% of A and 8% of B. Find the ratio of A : B.</h4>
+
+      <input type="radio"  name="question1">
+        <label >(A) 2 : 3</label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1">
+         <label>(B) 1 : 1</label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) 3 : 4</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1" id="A">
+         <label for="A">(D) 4 : 3</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (D)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">5% of A + 4% of B =</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;(6% of A + 8% of B)</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                        <td class="ga-td-divident">5</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;A +</td>
+                        <td class="ga-td-divident">4</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;B</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">6</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;A +</td>
+                        <td class="ga-td-divident">8</td>
+                        <td class="ga-td-line" rowspan="2">&nbsp;B</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">3</td>
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">100</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;A +</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;B</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;A +</td>
+                        <td class="ga-td-divident">4</td>
+                        <td class="ga-td-line" rowspan="2">&nbsp;B</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">20</td>
+                        <td class="ga-td-divisor">25</td>
+                        <td class="ga-td-divisor">25</td>
+                        <td class="ga-td-divisor">75</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">&nbsp;A =&nbsp;</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">4</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">&nbsp;B</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">20</td>
+                        <td class="ga-td-divisor">25</td>
+                        <td class="ga-td-divisor">75</td>
+                        <td class="ga-td-divisor">25</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;A =</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;B</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">100</td>
+                        <td class="ga-td-divisor">75</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-divident">A</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">100</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">4</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">B</td>
+                        <td class="ga-td-divisor">75</td>
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> Required ratio = 4 : 3</p>
+                </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. Two students appeared at an examination. One of them secured 9 marks more than the other and his marks was 56% of the sum of their marks. The marks obtained by them are:</p>
+         	
+        <input type="radio"  name="question1">
+          <label >(A) 39 , 30</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 41 , 32</label><br/>
+     
+        <input type="radio" name="question1" id="f">
+          <label for="f">(C) 42 , 33</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) 43 , 34</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (C)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> 
+                <p>Let their marks be (<i class="ga-var">x</i> + 9) and <i class="ga-var">x</i>.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then, <i class="ga-var">x</i> + 9 =</td>
+                    <td class="ga-td-divident">56</td>
+                    <td class="ga-td-line-rpad" rowspan="2">(<i class="ga-var">x</i> + 9 + <i class="ga-var">x</i>)</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">100</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 25(<i class="ga-var">x</i> + 9) = 14(2<i class="ga-var">x</i> + 9)</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 3<i class="ga-var">x</i> = 99</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 33</p>
+                <p>So, their marks are 42 and 33.</p>
+                
+              </div>   
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7. A student multiplied a number by	3/5	instead of	5/3	.What is the percentage error in the calculation? </p>
+
+        <input type="radio"  name="question1">
+          <label >(A) 34 %</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 54 %</label><br/>
+     
+        <input type="radio" name="question1" >
+          <label >(C) 44 %</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" id="e">
+          <label for="e">(D) 64 %</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (D)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> 
+                <p>Let the number be <i class="ga-var">x</i>.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then, error =</td>
+                    <td class="ga-td-divident">5</td>
+                    <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> - </td>
+                    <td class="ga-td-divident">3</td>
+                    <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> =</td>
+                    <td class="ga-td-divident">16</td>
+                    <td class="ga-td-line" rowspan="2"><i class="ga-var">x</i>.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">3</td>
+                    <td class="ga-td-divisor">5</td>
+                    <td class="ga-td-divisor">15</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Error% =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">16<i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">x</td>
+                    <td class="ga-td-divident">3</td>
+                    <td class="ga-td-line-lpad" rowspan="2">x 100</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 64%.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">15</td>
+                    <td class="ga-td-divisor">5<i class="ga-var">x</i></td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                 </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8. In an election between two candidates, one got 55% of the total valid votes, 20% of the votes were invalid. If the total number of votes was 7500, the number of valid votes that the other candidate got, was: </p>
+  
+          <input type="radio"  name="question1" id="d">
+            <label for="d">(A) 2700</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1"  >
+            <label >(B) 2900</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 3000</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" >
+            <label>(D) 3100</label> 
+      
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (A)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> <p>Number of valid votes = 80% of 7500 = 6000.</p>
+                  <p><img src="images/aptitude/1-sym-tfr.gif"> Valid votes polled by other candidate = 45% of 6000</p>
+                  <p>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line-rpad" rowspan="2">=</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                      <td class="ga-td-divident">45</td>
+                      <td class="ga-td-line-lpad" rowspan="2">x 6000</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                      <td class="ga-td-line-lrpad" rowspan="2">= 2700.</td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor">100</td>
+                   </tr> 
+                  </tbody></table>
+                  </p> </div>
+              </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9. Two tailors X and Y are paid a total of Rs. 550 per week by their employer. If X is paid 120 percent of the sum paid to Y, how much is Y paid per week? </p>
+    
+            <input type="radio"  name="question1">
+              <label >(A) Rs. 200 </label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" id="g" >
+              <label for="g">(B) Rs. 250</label><br/>
+         
+            <input type="radio" name="question1" >
+              <label >(C) Rs. 300</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1" >
+              <label >(D) None of these</label>
+        
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (B)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> <p>Let the sum paid to Y per week be Rs. <i class="ga-var">z</i>.</p>
+                    <p>Then, <i class="ga-var">z</i> + 120% of <i class="ga-var">z</i> = 550.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">z</i> +</td>
+                        <td class="ga-td-divident">120</td>
+                        <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">z</i> = 550</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">100</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                     <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                        <td class="ga-td-divident">11</td>
+                        <td class="ga-td-line" rowspan="2"><i class="ga-var">z</i>&nbsp;= 550</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">5</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">z</i> =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">550 x 5</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">&nbsp; = 250.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">11</td>
+                     </tr> 
+                    </tbody></table>
+                    </p> </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10. The population of a town increased from 1,75,000 to 2,62,500 in a decade. The average percent increase of population per year is: </p>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 4.37 %</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" id="h" >
+                <label for="h">(B) 5 %</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) 6 %</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1" >
+                <label >(D) 8.75 %</label>
+          
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (B)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                      <p>Increase in 10 years = (262500 - 175000) = 87500.</p>
+                      <p>
+                      <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                       <tbody><tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-line-rpad" rowspan="2">Increase% =</td>
+                          <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                          <td class="ga-td-divident">87500</td>
+                          <td class="ga-td-line-lrpad" rowspan="2">x 100</td>
+                          <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 50%.</td>
+                       </tr>
+                       <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">175000</td>
+                       </tr> 
+                      </tbody></table>
+                      </p>
+                      <p>
+                      <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                       <tbody><tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Required average =</td>
+                          <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                          <td class="ga-td-divident">50</td>
+                          <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">% = 5%.</td>
+                       </tr>
+                       <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">10</td>
+                       </tr> 
+                      </tbody></table>
+                      </p>
+                       </div>
+                  </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1>Watch Vedio</h1>
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/dEC6Ge2kR4E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
+     
+    
+    
+</body>
+</html>
+	

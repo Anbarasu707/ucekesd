@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test on Aptitude!</title>
+    
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+
+</style>
+<body>
+        <section>
+                <span>Test2 on Aptitude!</span>
+
+                
+    
+              </section>
+             
+               
+              </header>
+              <article>
+                <h1>Instructions</h1>
+                
+                <ul class="ul-test-instruction">
+                <li>Total number of questions : <b>20</b>.</li>
+                
+                <li>Each question carry 1 mark, no negative marks.</li>
+                <li>DO NOT refresh the page.</li>
+                <li>All the best :-).</li>
+                </ul>
+    
+                <div id="quiz"></div>
+                <button id="submit" ondblclick="window.location='view-22.html'">Submit Quiz</button>
+                <div id="results"></div>
+                <script>
+                (function() {
+          function buildQuiz() {
+            // we'll need a place to store the HTML output
+            const output = [];
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // we'll want to store the list of answer choices
+              const answers = [];
+        
+              // and for each available answer...
+              for (letter in currentQuestion.answers) {
+                // ...add an HTML radio button
+                answers.push(
+                  `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                  </label>`
+                );
+              }
+        
+              // add this question and its answers to the output
+              output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join("")} </div>`
+              );
+            });
+        
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join("");
+          }
+        
+          function showResults() {
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll(".answers");
+        
+            // keep track of user's answers
+            let numCorrect = 0;
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // find selected answer
+              const answerContainer = answerContainers[questionNumber];
+              const selector = `input[name=question${questionNumber}]:checked`;
+              const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        
+              // if answer is correct
+              if (userAnswer === currentQuestion.correctAnswer) {
+                // add to the number of correct answers
+                numCorrect++;
+        
+                // color the answers green
+                answerContainers[questionNumber].style.color = "lightgreen";
+              } else {
+                // if answer is wrong or blank
+                // color the answers red
+                answerContainers[questionNumber].style.color = "red";
+              }
+            });
+        
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+          }
+        
+          const quizContainer = document.getElementById("quiz");
+          const resultsContainer = document.getElementById("results");
+          const submitButton = document.getElementById("submit");
+          const myQuestions = [
+            {
+              question: "	1. Some articles were bought at 6 articles for Rs. 5 and sold at 5 articles for Rs. 6. Gain percent is:",
+              answers: {
+                a: "30 %",
+                b: "33 %",
+                c: "40 %",
+                d:"44 %",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "	2. What is the length of a running train?<br/>&nbsp&nbspI.The train crosses a man in 9 seconds.<br/> &nbsp&nbspII.The train crosses a 240 metre long platform in &nbsp&nbsp24 seconds.",
+              answers: {
+                a: "I alone sufficient while II alone not sufficient to &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspanswer",
+                b: "Either I or II alone sufficient to answer",
+                c: "Both I and II are necessary to answer",
+                d:"Both I and II are not sufficient to answer",
+              },
+              correctAnswer: "c"
+            },
+
+       {
+              question: "	3.  What is the principal sum?<br/>&nbsp&nbsp&nbspI.The sum amounts to Rs. 690 in 3 years at S.I.<br/>&nbsp&nbspII. The sum amounts to Rs. 750 in 5 years at S.I.<br/>&nbsp&nbspIII. The rate of interest is 5% p.a.",
+              answers: {
+                a: "I and III only",
+                b: "II and III only",
+                c: "I and III only, or II and III only",
+                d: "Any two of the three",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "	4.  66 cubic centimetres of silver is drawn into a wire 1 mm in diameter. The length of the wire in metres will be:",
+              answers: {
+                a: "84",
+                b: "90",
+                c: "168",
+                d:"336",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "5. The least number which when divided by 5, 6 , 7 and 8 leaves a remainder 3, but when divided by 9 leaves no remainder, is:",
+              answers: {
+                a: "1677",
+                b: "1683",
+                c: "2523",
+                d: "3363",
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "6. The captain of a cricket team of 11 members is 26 years old and the wicket keeper is 3 years older. If the ages of these two are excluded, the average age of the remaining players is one year less than the average age of the whole team. What is the average age of the team?",
+              answers: {
+                a:	"23 years",
+                b:	"24 years",
+                c:	"25 years",
+                d:  "None of these",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "7. A wheel that has 6 cogs is meshed with a larger wheel of 14 cogs. When the smaller wheel has made 21 revolutions, then the number of revolutions mad by the larger wheel is:",
+              answers: {
+                a:	"4",
+                b:	"9",
+                c:	"12",
+                d:  "49",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "8. A train 240 m long passes a pole in 24 seconds. How long will it take to pass a platform 650 m long?",
+              answers: {
+                a:	"65 sec",
+                b:	"89 sec",
+                c:	"100 sec",
+                d:  "150 sec",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "9. A bag contains 2 red, 3 green and 2 blue balls. Two balls are drawn at random. What is the probability that none of the balls drawn is blue?",
+              answers: {
+                a:	"10/21",
+                b:	"11/21",
+                c:	"2/7",
+                d:  "5/7",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "10. The product of two numbers is 2028 and their H.C.F. is 13. The number of such pairs is:",
+              answers: {
+                a:	"1",
+                b:	"2",
+                c:	"3",
+                d:  "4",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "11. The difference between a two-digit number and the number obtained by interchanging the positions of its digits is 36. What is the difference between the two digits of that number?",
+              answers: {
+                a:	"3",
+                b:	"4",
+                c:	"9",
+                d:  "None of these",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "12. The sum of the digits of a two-digit number is 15 and the difference between the digits is 3. What is the two-digit number?",
+              answers: {
+                a:	"69",
+                b:	"78",
+                c:	"96",
+                d:  "cannot be determined",
+
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "13. A boat having a length 3 m and breadth 2 m is floating on a lake. The boat sinks by 1 cm when a man gets on it. The mass of the man is:",
+              answers: {
+                a:	"12 kg",
+                b:	"60 kg",
+                c:	"70 kg",
+                d:  "96 kg",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "14. In a box, there are 8 red, 7 blue and 6 green balls. One ball is picked up randomly. What is the probability that it is neither red nor green?",
+              answers: {
+                a:	"1/3",
+                b:	"3/4",
+                c:	"7/19",
+                d:  "9/21",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "15. Which of the following statements is not correct?",
+              answers: {
+                a:	"log<sub>10</sub> 10 = 1",
+                b:	"log (2 + 3) = log (2 x 3)",
+                c:	"log<sub>10</sub> 1 = 0",
+                d:  "log (1 + 2 + 3) = log 1 + log 2 + log 3",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "16. A train 108 m long moving at a speed of 50 km/hr crosses a train 112 m long coming from opposite direction in 6 seconds. The speed of the second train is:",
+              answers: {
+                a:	"48 km/hr",
+                b:	"54 km/hr",
+                c:	"66 km/hr",
+                d:  "84 km/hr",
+
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "17. The average weight of 8 person's increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. What might be the weight of the new person?",
+              answers: {
+                a:	"76 kg",
+                b:	"76.5 kg",
+                c:	"85 kg",
+                d:  "None of these",
+
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "18. A flagstaff 17.5 m high casts a shadow of length 40.25 m. The height of the building, which casts a shadow of length 28.75 m under similar conditions will be:",
+              answers: {
+                a:	"10 m",
+                b:	"12.5 m",
+                c:	"17.5 m",
+                d:  "21.25 m",
+
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "19. If a - b = 3 and a<sup>2 </sup>+ b<sup>2 </sup>= 29, find the value of ab.",
+              answers: {
+                a:	"10",
+                b:	"12",
+                c:	"15",
+                d:  "18",
+
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "20. What is the volume of a cube?<br/>&nbsp&nbspI.The area of each face of the cube is 64 square &nbsp&nbsp&nbsp&nbspmetres.<br/>&nbsp II. The length of one side of the cube is 8 metres.",
+              answers: {
+                a:	"I alone sufficient while II alone not sufficient to &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspanswer",
+                b:	"Either I or II alone sufficient to answer",
+                c:	"Both I and II are not sufficient to answer",
+                d:  "Both I and II are necessary to answer",
+
+              },
+              correctAnswer: "b"
+            },
+
+          
+          ];
+        
+          // display quiz right away
+          buildQuiz();
+        
+          // on submit, show results
+          submitButton.addEventListener("click", showResults);
+        })();
+                </script>        </article>
+    
+</body>
+</html>

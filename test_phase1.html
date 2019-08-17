@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Phase I!!</title>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+body{
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+</style>
+<body>
+        <section>
+                <span>Test on Verbal and Reasoning!</span>
+
+                
+    
+              </section>
+             
+               
+              </header>
+              <article>
+                <h1>Instructions</h1>
+                
+                <ul class="ul-test-instruction">
+                <li>Total number of questions : <b>20</b>.</li>
+                
+                <li>Each question carry 1 mark, no negative marks.</li>
+                <li>DO NOT refresh the page.</li>
+                <li>All the best :-).</li>
+                </ul>
+    
+                <div id="quiz"></div>
+                <button id="submit" ondblclick='window.location="view-1.html"'><u>Submit Quiz</u></button>&nbsp; 
+                <div id="results"></div>
+              
+                <script>
+                (function() {
+          function buildQuiz() {
+            // we'll need a place to store the HTML output
+            const output = [];
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // we'll want to store the list of answer choices
+              const answers = [];
+        
+              // and for each available answer...
+              for (letter in currentQuestion.answers) {
+                // ...add an HTML radio button
+                answers.push(
+                  `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                  </label>`
+                );
+              }
+        
+              // add this question and its answers to the output
+              output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join("")} </div>`
+              );
+            });
+        
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join("");
+          }
+        
+          function showResults() {
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll(".answers");
+        
+            // keep track of user's answers
+            let numCorrect = 0;
+        
+            // for each question...
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+              // find selected answer
+              const answerContainer = answerContainers[questionNumber];
+              const selector = `input[name=question${questionNumber}]:checked`;
+              const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        
+              // if answer is correct
+              if (userAnswer === currentQuestion.correctAnswer) {
+                // add to the number of correct answers
+                numCorrect++;
+        
+                // color the answers green
+                answerContainers[questionNumber].style.color = "lightgreen";
+              } else {
+                // if answer is wrong or blank
+                // color the answers red
+                answerContainers[questionNumber].style.color = "red";
+              }
+            });
+        
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+          }
+        
+          const quizContainer = document.getElementById("quiz");
+          const resultsContainer = document.getElementById("results");
+          const submitButton = document.getElementById("submit");
+          const myQuestions = [
+            {
+              question: "	1. FAG, GAF, HAI, IAH, ____ (letter and symbol series)",
+              answers: {
+                a: "JAK",
+                b: "HAL",
+                c: "HAK",
+                d: "JAI",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "	2. MONK : DEVOTION (analogies)",
+              answers: {
+                a: "maniac : pacifism",
+                b: "explorer : contentment",
+                c: "visionary : complacency",
+                d: "rover : wanderlust",
+              },
+              correctAnswer: "d"
+            },
+
+       {
+              question: "3. ovation (essential part)",
+              answers: {
+                a: "outburst",
+                b: "bravo",
+                c: "applause",
+                d: "encore",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "4.	Look at this series: 201, 202, 204, 207, ... What number should come next? (number series)",
+              answers: {
+                a: "205",
+                b: "208",
+                c: "210",
+                d: "211",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "5. Which word does NOT belong with the others? (verbal_classification)",
+              answers: {
+                a: "acute",
+                b: "right",
+                c: "obtuse",
+                d: "parallel",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "6. Ten new television shows appeared during the month of September. Five of the shows were sitcoms, three were hour-long dramas, and two were news-magazine shows. By January, only seven of these new shows were still on the air. Five of the shows that remained were sitcoms. (verbal_reasoning) ",
+              answers: {
+                a: "Only one of the news-magazine shows remained on the air.",
+                b: "Only one of the hour-long dramas remained on the air",
+                c: "At least one of the shows that was cancelled was an hour-long drama.",
+                d: "Television viewers prefer sitcoms over hour-long dramas.",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "7. Look at this series: 14, 28, 20, 40, 32, 64, ... What number should come next? (number_series)",
+              answers: {
+                a: "52",
+                b: "56",
+                c: "96",
+                d: "128",
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "8. When they heard news of the hurricane, Maya and Julian decided to change their vacation plans. Instead of traveling to the island beach resort, they booked a room at a fancy new spa in the mountains. Their plans were a bit more expensive, but they'd heard wonderful things about the spa and they were relieved to find availability on such short notice.(verbal reasoninig) ",
+              answers: {
+                a: "Maya and Julian take beach vacations every year.",
+                b: "The spa is overpriced.",
+                c: "It is usually necessary to book at least six months in advance at the spa.",
+                d: "Maya and Julian decided to change their vacation plans because of the hurricane.",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "9. FRAUDULENT (antonyms)",
+              answers: {
+                a: "Candid",
+                b: "Direct",
+                c: "Forthright",
+                d: "Genuine",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "10. The employer appeared to be in such an affable mood that Rohit ......  (completing_stat.)",
+              answers: {
+                a: " decided to ask for a raise in his salary",
+                b: "was scared to talk to him about his leave",
+                c: "felt very guilty for his inadvertent slip",
+                d: "promised him that he would not commit mistake again",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "11. A person of good understanding knowledge and reasoning power (one_word_substitue)",
+              answers: {
+                a: "Expert",
+                b: "Intellectual ",
+                c: "Snob",
+                d: "Literate",
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "12. <u><i>The more they earn, more they spend.</i></u> (sentence_improvement)",
+              answers: {
+                a: "More they earn, more they spend",
+                b: "More they earn, the more they spend",
+                c: "The more they earn, the more they spend.",
+                d: "No improvement",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "13. (solve as per the <b><i>direction</i></b> given above) (spelling)",
+              answers: {
+                a: "Sepulchral",
+                b: "Sepilchrle",
+                c: "Sepalchrul",
+                d: "Sepalchrl",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "14. (solve as per the <b><i>direction</i></b> given above) (spoterror)",
+              answers: {
+                a: "Having received your letter",
+                b: "this morning, we are writing",
+                c: "to thank you for the same.",
+                d: "No error.",
+              },
+              correctAnswer: "d"
+            },
+            {
+              question: "15. LAMENT (synonyms)",
+              answers: {
+                a: "Complain",
+                b: "Comment",
+                c: "Condone",
+                d: "Console",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "16. Look at this series: 1.5, 2.3, 3.1, 3.9, ... What number should come next? (number_series)",
+              answers: {
+                a: "4.2",
+                b: "4.4",
+                c: "4.7",
+                d: "5.1",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "17. SCD, TEF, UGH, ____, WKL(letter_and_symbol_series)",
+              answers: {
+                a: "CMN",
+                b: "UJI",
+                c: "VIJ",
+                d: "IJT",
+              },
+              correctAnswer: "c"
+            },
+            {
+              question: "18. The dissidents <u><i>hold</i></u> a great problem in every political party.(sentence_improvement)",
+              answers: {
+                a: "cause",
+                b: "give",
+                c: "pose",
+                d: "No improvement",
+              },
+              correctAnswer: "a"
+            },
+            {
+              question: "19. (solve as per the <b><i>direction</i></b> given above) (spellings)",
+              answers: {
+                a: "Itinarery",
+                b: "Itinerary",
+                c: "Itenary",
+                d: "Itenary",
+              },
+              correctAnswer: "b"
+            },
+            {
+              question: "20. ATTEMPT (synonyms)",
+              answers: {
+                a: "Serve",
+                b: "Explore",
+                c: "Try",
+                d: "Explain ",
+              },
+              correctAnswer: "c"
+            },
+          
+          
+          
+           
+          ];
+        
+          // display quiz right away
+          buildQuiz();
+        
+          // on submit, show results
+          submitButton.addEventListener("click", showResults);
+        })();
+                </script>        </article>
+    
+</body>
+</html>

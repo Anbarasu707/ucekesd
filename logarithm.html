@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logarithm</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+    .bix-div-introduction p {
+        margin-top: 15px;
+    }
+    .bix-div-introduction p {
+        line-height: 1.7;
+        font-family: arial;
+    }
+    i.ga-bar, i.ga-def, i.ga-fhead {
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .bix-ans-description p
+    {
+        font-family: arial;
+        font-size: medium;
+    }
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Logarithm!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               <h3 style="font-weight: 600">Basic Formulas:</h3>
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+        <div class="bix-div-introduction">   
+            <ol type="1">
+              
+            <li>
+            <p><i class="ga-fhead">Logarithm:</i></p>
+            <p>If <i class="ga-var">a</i> is a positive real number, other than 1 and <i class="ga-var">a</i><sup><i class="ga-var">m</i></sup> = <i class="ga-var">x</i>, then we write:<br> <i class="ga-def"><i class="ga-var">m</i> = log<sub>a</sub><i class="ga-var">x</i></i> and we say that the value of log <i class="ga-var">x</i> to the base <i class="ga-var">a</i> is <i class="ga-var">m</i>.</p>
+            <p><i class="ga-fhead">Examples:</i></p>
+            <p>(i). 10<sup>3</sup> 1000 &nbsp; <img src="images/aptitude/1-sym-imp.gif"> &nbsp; log<sub>10</sub> 1000 = 3.</p>
+            <p>(ii). 3<sup>4</sup> = 81 &nbsp; <img src="images/aptitude/1-sym-imp.gif"> &nbsp; log<sub>3</sub> 81 = 4.</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">(iii). 2<sup>-3</sup> =</td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line-lrpad" rowspan="2"> &nbsp; <img src="images/aptitude/1-sym-imp.gif"> &nbsp; log<sub>2</sub></td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line-lrpad" rowspan="2">= -3.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">8</td>
+                <td class="ga-td-divisor">8</td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>(iv). (.1)<sup>2</sup> = .01 &nbsp; <img src="images/aptitude/1-sym-imp.gif"> &nbsp; log<sub>(.1)</sub> .01 = 2.</p>
+            </li>
+            
+            <li>
+            <p><i class="ga-fhead">Properties of Logarithms:</i></p>
+            <p>1. log<sub>a</sub> (<i class="ga-var">xy</i>) = log<sub>a</sub> <i class="ga-var">x</i> + log<sub>a</sub> <i class="ga-var">y</i></p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">2. log<sub>a</sub></td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-line-lrpad" rowspan="2"> = log<sub>a</sub> <i class="ga-var">x</i> - log<sub>a</sub>  <i class="ga-var">y</i></td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor"><i class="ga-var">y</i></td>
+             </tr> 
+            </tbody></table>
+            
+            </p>
+            <p>3. log<sub>x</sub> <i class="ga-var">x</i> = 1</p>
+            <p>4. log<sub>a</sub> 1 = 0</p>
+            <p>5. log<sub>a</sub> (<i class="ga-var">x</i><sup><i class="ga-var">n</i></sup>) = <i class="ga-var">n</i>(log<sub>a</sub> <i class="ga-var">x</i>)</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">6. log<sub>a</sub> <i class="ga-var">x</i> =</td>
+                <td class="ga-td-divident">1</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">log<sub>x</sub> <i class="ga-var">a</i></td>
+             </tr> 
+            </tbody></table>
+            </p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">7. log<sub>a</sub> <i class="ga-var">x</i> =</td>
+                <td class="ga-td-divident">log<sub>b</sub> <i class="ga-var">x</i></td>
+                <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                <td class="ga-td-divident">log <i class="ga-var">x</i></td>
+                <td class="ga-td-line" rowspan="2">.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">log<sub>b</sub> <i class="ga-var">a</i></td>
+                <td class="ga-td-divisor">log <i class="ga-var">a</i></td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            
+            <li>
+            <p><i class="ga-fhead">Common Logarithms:</i></p>
+            <p>Logarithms to the base 10 are known as common logarithms.</p>
+            </li>
+            
+            <li>
+            <p>The logarithm of a number contains two parts, namely 'characteristic' and 'mantissa'.</p>
+            <p><i class="ga-fhead">Characteristic:</i> The internal part of the logarithm of a number is called its <i class="ga-def">characteristic.</i></p>
+            <p>Case I: When the number is greater than 1.</p>
+            <p>In this case, the characteristic is one less than the number of digits in the left of the decimal point in the given number.</p>
+            <p>Case II: When the number is less than 1.</p>
+            <p>In this case, the characteristic is one more than the number of zeros between the decimal point and the first significant digit of the number and it is negative.</p>
+            <p>Instead of -1, -2 etc. we write <i class="ga-bar">1</i> (one bar), <i class="ga-bar">2</i> (two bar), etc.</p>
+            <p>Examples:-</p>
+            <p>
+            <table cellspacing="0" cellpadding="5" border="0" style="border:0px solid #ccc; font-family:inherit; font-size:inherit">
+            <tbody><tr><td style="border:1px solid #ccc">Number</td><td style="border:1px solid #ccc">Characteristic</td><td style="border:1px solid #ccc">Number</td><td style="border:1px solid #ccc">Characteristic</td></tr>
+            <tr><td style="border:1px solid #ccc">654.24</td><td style="border:1px solid #ccc">2</td><td style="border:1px solid #ccc">0.6453</td><td style="border:1px solid #ccc"><i class="ga-bar">1</i></td></tr>
+            <tr><td style="border:1px solid #ccc">26.649</td><td style="border:1px solid #ccc">1</td><td style="border:1px solid #ccc">0.06134</td><td style="border:1px solid #ccc"><i class="ga-bar">2</i></td></tr>
+            <tr><td style="border:1px solid #ccc">8.3547</td><td style="border:1px solid #ccc">0</td><td style="border:1px solid #ccc">0.00123</td><td style="border:1px solid #ccc"><i class="ga-bar">3</i></td></tr>
+            </tbody></table>
+            </p>
+            <p><i class="ga-fhead">Mantissa:</i></p>
+            <p>The decimal part of the logarithm of a number is known is its <i class="ga-def">mantissa.</i> For mantissa, we look through log table.</p>
+            </li>
+            
+            </ol>
+        </div>
+    </div>
+    <h3 style="font-weight: 600">General Questions:</h3>
+    <div class="scp-quizzes-data">
+  <h4>1. If log 27 = 1.431, then the value of log 9 is</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) 0.934</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 0.945</label><br/>
+        
+    <input type="radio" id="C" name="question1">
+       <label for="C">(C) 0.954</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 0.958</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> 
+                    <p>log 27 = 1.431</p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> log (3<sup>3</sup> ) = 1.431</p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> 3 log 3 = 1.431</p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> log 3 = 0.477</p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> log 9 = log(3<sup>2</sup> ) = 2 log 3 = (2 x 0.477) = 0.954.</p>
+                </div>
+            </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2. If log 2 = 0.3010 and log 3 = 0.4771, the value of log5 512 is:</h4>
+        <br/>
+   
+        <input type="radio"  name="question1">
+       <label>(A) 2.870</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 2.967</label><br/>
+        
+    <input type="radio" name="question1" id="a">
+       <label for="a">(C) 3.876</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label >(D) 3.912</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal-rpad" align="left">log<sub>5</sub> 512</td>
+                  <td class="ga-td-normal" align="left">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">log 512</td>
+                    </tr>
+                    <tr class="ga-tr-divisort" align="center">
+                         <td class="ga-td-divisor">log 5</td>
+                    </tr> 
+                    </tbody></table>
+                  </td>
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">log 2<sup>9</sup></td>
+                    </tr>
+                    <tr class="ga-tr-divisort" align="center">
+                         <td class="ga-td-divisor">log (10/2)</td>
+                    </tr> 
+                    </tbody></table>
+                  </td>                   
+                 </tr>
+                 
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">9 log 2</td>
+                    </tr>
+                    <tr class="ga-tr-divisort" align="center">
+                         <td class="ga-td-divisor">log 10 - log 2</td>
+                    </tr> 
+                    </tbody></table>
+                  </td>                   
+                 </tr>
+                 
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">(9 x 0.3010)</td>
+                    </tr>
+                    <tr class="ga-tr-divisort" align="center">
+                         <td class="ga-td-divisor">1 - 0.3010</td>
+                    </tr> 
+                    </tbody></table>
+                  </td>                   
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">2.709</td>
+                    </tr>
+                    <tr class="ga-tr-divisort" align="center">
+                         <td class="ga-td-divisor">0.699</td>
+                    </tr> 
+                    </tbody></table>
+                  </td>                   
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">2709</td>
+                    </tr>
+                    <tr class="ga-tr-divisort" align="center">
+                         <td class="ga-td-divisor">699</td>
+                    </tr> 
+                    </tbody></table>
+                  </td>                   
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">= 3.876</td>
+                 </tr>
+                </tbody></table>
+                </div>
+            </ul>
+       </div></div> 
+     </div>
+     <!--question no 3-->
+    <div class="scp-quizzes-data">
+         <h4> <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >3.&nbsp;&nbsp; &nbsp;&nbsp;</td>
+                      <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-divident">log 8</td>
+                        <td class="ga-td-line-lrpad" rowspan="2" >is equal to:</td>
+                      </tr>
+                      <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">log 8</td>
+                      </tr> 
+                    </tbody>
+                  </table></td></tr>
+              </tbody></table>
+          </p></h4>
+         
+         <input type="radio"  name="question1">
+            <label >
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(A) </td>
+                      <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-divident">1</td>
+                      </tr>
+                      <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">8</td>
+                      </tr> 
+                    </tbody>
+                  </table></td></tr>
+              </tbody></table>
+            </label>&nbsp;&nbsp;
+        
+        <input type="radio"  name="question1">
+          <label >
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(B) </td>
+                        <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-divident">1</td>
+                        </tr>
+                        <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">4</td>
+                        </tr> 
+                      </tbody>
+                    </table></td></tr>
+              </tbody></table>
+          </label><br/>
+            
+        <input type="radio" name="question1" id="b">
+          <label for="b">
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(C) </td>
+                        <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-divident">1</td>
+                        </tr>
+                        <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">2</td>
+                        </tr> 
+                      </tbody>
+                    </table></td></tr>
+                </tbody></table>
+          </label>&nbsp;&nbsp;
+            
+        <input type="radio" name="question1" >
+          <label>
+              <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(D) </td>
+                        <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-divident">1</td>
+                        </tr>
+                        <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">8</td>
+                        </tr> 
+                      </tbody>
+                    </table></td></tr>
+                </tbody>
+              </table>
+          </label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+              <div class="bix-ans-description"> 
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-divident">log <span class="ga-root-h1">8</span></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">log (8)<sup>1/2</sup></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident"><img src="images/aptitude/1-div-1by2.gif">log 8</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line" rowspan="2">.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">log 8</td>
+                    <td class="ga-td-divisor">log 8</td>
+                    <td class="ga-td-divisor">log 8</td>
+                    <td class="ga-td-divisor">2</td>
+                 </tr> 
+                </tbody></table>
+                
+              </div>
+          </ul>
+       </div></div> 
+     
+     </div>
+     <!--question no 4-->
+    <div class="scp-quizzes-data">
+          
+          <h4>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody>
+                          <tr class="ga-tr-divident" align="center">
+                              <td class="ga-td-line" rowspan="2">4.  If log<sub>10</sub> 7 = <i class="ga-var">a</i>, then log<sub>10</sub></td>
+                              <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                              <td class="ga-td-divident">1</td>
+                              <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                              <td class="ga-td-line-lrpad" rowspan="2">is equal to:</td>
+                           </tr>
+                           <tr class="ga-tr-divisor" align="center">
+                              <td class="ga-td-divisor">70</td>
+                           </tr>  
+                      </tbody>
+                    </table>
+          </h4>
+          
+            <input type="radio"  name="question1" id="B">
+              <label for="B">(A) 
+                  <td class="bix-td-option" width="99%" id="tdOptionDt_A_561">- (1 + <i class="ga-var">a</i>)</td>
+              </label>&nbsp;&nbsp;
+                
+            <input type="radio"  name="question1">
+              <label>(B) 
+                  <td class="bix-td-option" width="99%" id="tdOptionDt_B_561">(1 + <i class="ga-var">a</i>)<sup>-1</sup></td>
+              </label><br/>
+                
+            <input type="radio" name="question1" >
+              <label>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(C) </td>
+                            <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr class="ga-tr-divident" align="center">
+                              <td class="ga-td-divident">a</td>
+                            </tr>
+                            <tr class="ga-tr-divisor" align="center">
+                              <td class="ga-td-divisor">10</td>
+                            </tr> 
+                          </tbody>
+                        </table></td></tr>
+                    </tbody></table>
+              </label>&nbsp;&nbsp;
+                
+            <input type="radio" name="question1">
+              <label>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(D) </td>
+                            <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr class="ga-tr-divident" align="center">
+                              <td class="ga-td-divident">1</td>
+                            </tr>
+                            <tr class="ga-tr-divisor" align="center">
+                              <td class="ga-td-divisor">10a</td>
+                            </tr> 
+                          </tbody>
+                        </table></td></tr>
+                    </tbody></table>
+              </label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+              <div class="bix-ans-description"> 
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal-rpad" align="left">
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line" rowspan="2">log<sub>10</sub></td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                      <td class="ga-td-divident">1</td>
+                      <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor">70</td>
+                   </tr> 
+                  </tbody></table>
+                  </td>
+                  <td class="ga-td-normal" align="left">= log<sub>10</sub> 1 - log<sub>10</sub> 70</td>
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">= - log<sub>10</sub> (7 x 10)</td>
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">= - (log<sub>10</sub> 7 + log<sub>10</sub> 10)</td>
+                 </tr>
+                 <tr class="ga-tr-normal" align="center">
+                  <td class="ga-td-normal"></td>
+                  <td class="ga-td-normal" align="left">= - (<i class="ga-var">a</i> + 1).</td>
+                 </tr>
+                </tbody></table>
+               </div>
+          </ul>
+      </div></div> </div>
+     <!-- question no 5-->
+      <div class="scp-quizzes-data">
+          <h4>
+              <table class="bix-tbl-container" cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tbody>
+                  <tr>
+                  <td class="bix-td-qtxt" valign="top"><p>
+                    5.  If log<sub>10</sub> 2 = 0.3010, then log<sub>2</sub> 10 is equal to:
+                    </p>
+                  </td>
+                </p></td></tr>
+               </tbody></table> 
+          </h4>
+      <input type="radio"  name="question1">
+        <label >
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(A) </td>
+                      <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-divident">699</td>
+                      </tr>
+                      <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">301</td>
+                      </tr> 
+                    </tbody>
+                  </table></td></tr>
+              </tbody>
+            </table>
+        </label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1" id="A">
+         <label for="A">
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr><td class="bix-td-option" width="1%" id="tdOptionNo_A_698" >(B) </td>
+                      <td class="bix-td-option" width="99%" id="tdOptionDt_A_698">
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-divident">1000</td>
+                      </tr>
+                      <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">301</td>
+                      </tr> 
+                    </tbody>
+                  </table></td></tr>
+              </tbody>
+            </table>
+         </label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) 0.3010</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1">
+         <label>(D) 0.6990</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+              <div class="bix-ans-description"> 
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">log<sub>2</sub> 10 =</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">10000</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1000</td>
+                    <td class="ga-td-line" rowspan="2">.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">log<sub>10</sub> 2</td>
+                    <td class="ga-td-divisor">0.3010</td>
+                    <td class="ga-td-divisor">3010</td>
+                    <td class="ga-td-divisor">301</td>
+                 </tr> 
+                </tbody></table>
+                
+              </div>
+          </ul>
+      </div></div>
+    </div>
+    <!--QUESTION 6--> 
+    <div class="scp-quizzes-data">
+      <h4> <p><td class="bix-td-qtxt" valign="top"><p>6.  If log<sub>10</sub> 2 = 0.3010, the value of log<sub>10</sub> 80 is:</p></td></p></h4>
+         	
+        <input type="radio"  name="question1">
+          <label >(A) 1.6020</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" id="f">
+          <label for="f">(B) 1.9030</label><br/>
+     
+        <input type="radio" name="question1" >
+          <label >(C) 3.9030</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) None of these</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (B)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                  <tbody><tr class="ga-tr-normal" align="center">
+                   <td class="ga-td-normal">log<sub>10</sub>&nbsp;80</td>
+                   <td class="ga-td-normal" align="left">= log<sub>10</sub> (8 x 10)</td>
+                  </tr>
+                   <tr class="ga-tr-normal" align="center">
+                   <td class="ga-td-normal"></td>
+                   <td class="ga-td-normal" align="left">= log<sub>10</sub> 8 + log<sub>10</sub> 10</td>
+                  </tr>
+                   <tr class="ga-tr-normal" align="center">
+                   <td class="ga-td-normal"></td>
+                   <td class="ga-td-normal" align="left">= log<sub>10</sub> (2<sup>3</sup> ) + 1</td>
+                  </tr>
+                  <tr class="ga-tr-normal" align="center">
+                   <td class="ga-td-normal"></td>
+                   <td class="ga-td-normal" align="left">= 3 log<sub>10</sub> 2 + 1</td>
+                  </tr>
+                  <tr class="ga-tr-normal" align="center">
+                   <td class="ga-td-normal"></td>
+                   <td class="ga-td-normal" align="left">= (3 x 0.3010) + 1</td>
+                  </tr>
+                  <tr class="ga-tr-normal" align="center">
+                   <td class="ga-td-normal"></td>
+                   <td class="ga-td-normal" align="left">= 1.9030.</td>
+                  </tr>
+                  
+                 </tbody></table> 
+              </div>
+            </ul>
+      </div></div> 
+    </div>
+    <!--question 7-->
+    <div class="scp-quizzes-data">
+      <h4> <p> <td class="bix-td-qtxt" valign="top"><p>
+          7.   If log<sub>10</sub> 5 + log<sub>10</sub> (5<i class="ga-var">x</i> + 1) = log<sub>10</sub> (<i class="ga-var">x</i> + 5) + 1, then <i class="ga-var">x</i> is equal to:
+          </p></td></p></h4>
+
+        <input type="radio"  name="question1">
+          <label >(A) 1</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" id="e">
+          <label for="e">(B) 3</label><br/>
+     
+        <input type="radio" name="question1" >
+          <label >(C) 5</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) 10</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (B)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> 
+                  <p>log<sub>10</sub> 5 + log<sub>10</sub> (5<i class="ga-var">x</i> + 1) = log<sub>10</sub> (<i class="ga-var">x</i> + 5) + 1</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> log<sub>10</sub> 5 + log<sub>10</sub> (5<i class="ga-var">x</i> + 1) = log<sub>10</sub> (<i class="ga-var">x</i> + 5) + log<sub>10</sub> 10</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> log<sub>10</sub>  [5 (5<i class="ga-var">x</i> + 1)] = log<sub>10</sub> [10(<i class="ga-var">x</i> + 5)]</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> 5(5<i class="ga-var">x</i> + 1) = 10(<i class="ga-var">x</i> + 5)</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> 5<i class="ga-var">x</i> + 1 = 2<i class="ga-var">x</i> + 10</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> 3<i class="ga-var">x</i> = 9</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 3.</p>
+              </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+            <tbody><tr class="ga-tr-divident" align="center">
+               <td class="ga-td-line-rpad" rowspan="2">8.  The value of</td>
+               <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+               <td class="ga-td-divident">1</td>
+               <td class="ga-td-line-lrpad" rowspan="2">+</td>
+               <td class="ga-td-divident">1</td>
+               <td class="ga-td-line-lrpad" rowspan="2">+</td>
+               <td class="ga-td-divident">1</td>
+               <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+               <td class="ga-td-line-lrpad" rowspan="2">is:</td>
+            </tr>
+            <tr class="ga-tr-divisor" align="center">
+               <td class="ga-td-divisor">log<sub>3</sub> 60</td>
+               <td class="ga-td-divisor">log<sub>4</sub> 60</td>
+               <td class="ga-td-divisor">log<sub>5</sub> 60</td>
+            </tr> 
+           </tbody></table></p></h4>
+  
+          <input type="radio"  name="question1">
+            <label >(A) 0</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1" id="d" >
+            <label for="d">(B) 1</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 5</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" >
+            <label>(D) 60</label> 
+      
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (B)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> 
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal-rpad" align="left">Given expression</td>
+                      <td class="ga-td-normal" align="left">= log<sub>60</sub> 3 + log<sub>60</sub> 4 + log<sub>60</sub> 5</td>
+                     </tr>
+                     <tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal"></td>
+                      <td class="ga-td-normal" align="left">= log<sub>60</sub> (3 x 4 x 5)</td>
+                     </tr>
+                     <tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal"></td>
+                      <td class="ga-td-normal" align="left">= log<sub>60</sub> 60</td>
+                     </tr>
+                     <tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal"></td>
+                      <td class="ga-td-normal" align="left">= 1.</td>
+                     </tr>
+                     
+                    </tbody></table>
+                  </div>
+              </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p><td class="bix-td-qtxt" valign="top"><p>
+              9.  If log 2 = 0.30103, the number of digits in 2<sup>64</sup> is:
+              </p></td></p>
+    
+            <input type="radio"  name="question1">
+              <label >(A) 18</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" >
+              <label>(B) 19</label><br/>
+         
+            <input type="radio" name="question1" id="g">
+              <label for="g">(C) 20</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1"  >
+              <label >(D) 21</label>
+
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (C)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> 
+                      <p>
+                      <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                      <tbody><tr class="ga-tr-normal" align="center">
+                        <td class="ga-td-normal">log (2<sup>64</sup>)</td>
+                        <td class="ga-td-normal" align="left">= 64 x log 2</td>                   
+                       </tr>
+                       <tr class="ga-tr-normal" align="center">
+                        <td class="ga-td-normal"></td>
+                        <td class="ga-td-normal" align="left">= (64 x 0.30103)</td>                   
+                       </tr>
+                       <tr class="ga-tr-normal" align="center">
+                        <td class="ga-td-normal"></td>
+                        <td class="ga-td-normal" align="left">= 19.26592</td>                   
+                       </tr>
+                      </tbody></table>
+                      </p>
+                      <p>Its characteristic is 19.</p>
+                      <p>Hence, then number of digits in 2<sup>64</sup> is 20.</p>
+                  </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10.   The value of log<sub>2</sub> 16 is:</p></h4>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 0</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" id="h">
+                <label for="h">(B) 4</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) 8</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1" >
+                <label >(D) 16</label>
+  
+          
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (B)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                        <p>Let log<sub>2</sub> 16 = <i class="ga-var">n.</i></p>
+                        <p>Then, 2<sup><i class="ga-var">n</i></sup> = 16 = 2<sup>4</sup> &nbsp; &nbsp; <img src="images/aptitude/1-sym-imp.gif"> &nbsp; &nbsp; <i class="ga-var">n</i> = 4.</p>
+                        <p><img src="images/aptitude/1-sym-tfr.gif"> log<sub>2</sub> 16 = 4.</p>
+                    </div>
+                  </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1 style="font-weight:600">Watch Vedio</h1>
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/V3l9RlPnnMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     
+</article>
+     
+    
+    
+</body>
+</html>
+	

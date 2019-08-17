@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verbal and Reasoning</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+  
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html, body and (min-scroll-y: 100vh) {
+  header {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+  }
+}
+     .button {
+  border-radius: 4px;
+  background-color:lightsteelblue;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 400px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    li.list-group-item{
+        font-family: serif;
+        width: 60%;
+        
+    }
+</style>
+<body>
+        <section>
+                <span>Verbal and Reasoning!!</span>
+              </section>
+              <header>
+                <h1></h1> </header>
+               
+   <center>          
+    <article>
+            <!-- <a href="Logical Reasoning/log-analogies.html"> eer</a>      -->
+       <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color: blue;font-weight: bold"><button class="button"><span>Verbal Ability</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <ul class="list-group" >
+            <a href="Verbal Ability/ver-synonyms.html" style="color:black"> <li class="list-group-item">Synonyms</li></a>
+            <a href="Verbal Ability/ver-Antonyms.html" style="color:black"> <li class="list-group-item">Antonyms</li></a>
+            <a href="Verbal Ability/ver-spelling.html" style="color:black"> <li class="list-group-item">Spellings</li></a>
+            <a href="Verbal Ability/ver-spoterror.html" style="color:black"> <li class="list-group-item">Spotting Errors</li></a>
+            <a href="Verbal Ability/ver-completing_state.html" style="color:black"> <li class="list-group-item">Completing Statements</li></a>
+            <a href="Verbal Ability/ver-One _Word_Substitutes.html" style="color:black"> <li class="list-group-item">One Word Substitutes</li></a>
+            <a href="Verbal Ability/ver-Sentence _Improvement.html" style="color:black"> <li class="list-group-item">Sentence Improvement</li></a>
+            <a href="Verbal Ability/ver-closet.html" style="color:black"> <li class="list-group-item">Closet Test</li></a>
+            <!-- <a href="home/usha/Documents/Verbal Ability/ver-Synonyms.html" style="color: black"> <li class="list-group-item"></li></a>
+            <a href="" style="color: black" ><li class="list-group-item"></li></a>
+            <a href="c/point.html" style="color: black"><li class="list-group-item">Pointers</li></a>
+            <a href="c/str.html" style="color: black"><li class="list-group-item">Strings</li></a>
+            <a href="c/array.html" style="color: black"><li class="list-group-item">Arrays</li></a>
+            <a href="c/struct.html" style="color: black"><li class="list-group-item">Structures, Unions, Enums</li></a>
+            <a href="c/lib.html" style="color: black"><li class="list-group-item">Library Functions</li></a>
+            <a href="c/control.html" style="color: black"><li class="list-group-item">Control Instructions</li></a>
+             -->
+            
+          
+        </ul>
+       </div></div> 
+        
+        <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color: blue;font-weight: bold"> <button class="button"><span>Logical Reasoning</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <ul class="list-group" > 
+            <a href="Logical Reasoning/log-let&sym.html" style="color: black"> <li class="list-group-item">Letter and Symbol Series</li></a>
+            <a href="Logical Reasoning/log-no.series.html" style="color: black"><li class="list-group-item">Number Seriess</li></a>
+            <a href="Logical Reasoning/log-analogies.html" style="color: black"><li class="list-group-item">Analogies</li></a>
+            <a href="Logical Reasoning/log-logi&pro.html" style="color: black"><li class="list-group-item">Logical Problems</li></a>
+            <a href="Logical Reasoning/log-ver_class.html" style="color: black"><li class="list-group-item">Verbal Classification</li></a>
+            <a href="Logical Reasoning/log-ver_rea.html" style="color: black"><li class="list-group-item">Verbal Reasoning</li></a>
+            <a href="Logical Reasoning/log-essential.html" style="color: black"><li class="list-group-item">Essential Part</li></a>
+            <a href="Logical Reasoning/log-analyarg.html" style="color: black"><li class="list-group-item">Analyzing Arguments</li></a>
+         </ul>
+       </div></div> 
+        
+ <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color: blue;font-weight: bold"> <button class="button"><span>Verbal Reasoning</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <ul class="list-group" > 
+            <a href="Verbal Reasoning/ver-bloodrel.html" style="color: black"><li class="list-group-item">Blood Relation Test</li></a>
+              <a href="Verbal Reasoning/ver-direction.html" style="color: black"> <li class="list-group-item">Direction Sense Test</li></a>
+             <a href="Verbal Reasoning/ver-char_puzz.html" style="color: black"><li class="list-group-item">Character Puzzles</li></a>
+              <a href="Verbal Reasoning/ver-classif.html" style="color: black"><li class="list-group-item">Classification</li></a>
+              <a href="Verbal Reasoning/ver-arith.html" style="color: black"><li class="list-group-item">Arithmetic Reasoning</li></a>
+              <a href="Verbal Reasoning/ver-series.html" style="color: black"><li class="list-group-item">Series Completion</li></a>
+              <a href="Verbal Reasoning/ver-analogy.html" style="color: black"><li class="list-group-item">Analogy</li></a>
+              <a href="Verbal Reasoning/ver-verification.html" style="color: black"><li class="list-group-item">Verification of Truth</li></a>
+        </ul>
+       </div></div>
+       <div> <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color: blue;font-weight: bold"> <button class="button"><span>Non-Verbal Reasoning</span></button></a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <ul class="list-group" > 
+            <a href="Non-verbal Reasoning/Nver-Analytical.html" style="color: black"><li class="list-group-item">Analytical Reasoning</li></a>
+              <a href="Non-verbal Reasoning/Nver-Mirror.html" style="color: black"> <li class="list-group-item">Mirror Images</li></a>
+             <a href="Non-verbal Reasoning/Nver-Patterncomp.html" style="color: black"><li class="list-group-item">Pattern Completion</li></a>
+              <a href="Non-verbal Reasoning/Nver-water.html" style="color: black"><li class="list-group-item">Water Images</li></a>
+              
+        </ul>
+       </div></div>
+
+                
+        </article>
+    </center>
+    
+</body>
+</html>

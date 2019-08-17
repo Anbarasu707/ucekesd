@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Average</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+    .bix-div-introduction p {
+        margin-top: 15px;
+    }
+    .bix-div-introduction p {
+        line-height: 1.7;
+        font-family: arial;
+    }
+    i.ga-bar, i.ga-def, i.ga-fhead {
+        font-style: normal;
+        font-weight: 600;
+    }
+    .bix-ans-description p
+    {
+        font-family: arial;
+        font-size: medium;
+    }
+
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Average!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+        <div class="bix-div-introduction">    
+            <ol type="1">
+            <li>
+                <p><i class="ga-fhead">Average:</i></p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Average = </td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">Sum of observations</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">Number of observations</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+            </li>
+            <li>
+                <p><i class="ga-fhead">Average Speed:</i></p>
+                <p>Suppose a man covers a certain distance at <i class="ga-var">x</i> kmph and an equal distance at <i class="ga-var">y</i> kmph.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then, the average speed druing the whole journey is</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">2<i class="ga-var">xy</i></td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lpad" rowspan="2">kmph.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i> + <i class="ga-var">y</i></td>
+                 </tr> 
+                </tbody></table>
+                </p>
+            </li>
+            </ol>
+            </div>
+    </div>
+    <div class="scp-quizzes-data">
+  <h4>1. 	
+    In the first 10 overs of a cricket game, the run rate was only 3.2. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?</h4>
+    <br/>
+    <input type="radio"  name="question1" id="C">
+       <label for="C">(A) 6.25</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 6.5</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 6.75</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 7</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">Required run rate =</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident" rowspan="1">282 - (3.2 x 10)</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                            <td class="ga-td-divident" rowspan="1">250</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">&nbsp;&nbsp;&nbsp;= 6.25</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">40</td>
+                        <td class="ga-td-divisor">40</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    
+            </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2. 	
+            The average of 20 numbers is zero. Of them, at the most, how many may be greater than zero?</h4>
+        <br/>
+   
+        <input type="radio"  name="question1">
+       <label  >(A) 0</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 1</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 10</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" id="a">
+       <label for="a">(D) 19</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (D)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <p>Average of 20 numbers = 0.</p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> Sum of 20 numbers (0 x 20) = 0.</p>
+                <p>It is quite possible that 19 of these numbers may be positive and if their sum is <i class="ga-var">a</i> then 20th number is (-<i class="ga-var">a</i>).</p>
+                 </div>
+            </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. 	
+            The average weight of 8 person's increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. What might be the weight of the new person?</p></h4>
+         
+         <input type="radio"  name="question1">
+       <label >(A) 76 kg</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="b">
+       <label for="b">(B) 76.5 kg</label><br/>
+        
+    <input type="radio" name="question1" id="b">
+       <label for="b">(C) 85 kg</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label>(D) can't be determined</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+             <div class="bix-ans-description"> <p>Total weight increased = (8 x 2.5) kg = 20 kg.</p>
+                <p>Weight of new person = (65 + 20) kg = 85 kg.</p>
+                </div> 
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+          <h4>4.The average monthly income of P and Q is Rs. 5050. The average monthly income of Q and R is Rs. 6250 and the average monthly income of P and R is Rs. 5200. The monthly income of P is:</h4>
+          
+    <input type="radio"  name="question1">
+       <label >(A) 3.5 years</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="B">
+       <label for="B">(B) 4 years</label><br/>
+        
+    <input type="radio" name="question1" >
+       <label>(C) 4.5 years</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 5 years</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             Time = [(100*81)/(450*4.5)]years<br>
+                 &nbsp;&nbsp;&nbsp;&nbsp; = 4 years
+          </ul>
+      </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4><p>5. A person borrows Rs. 5000 for 2 years at 4% p.a. simple interest. He immediately lends it to another person at 6% p.a for 2 years. 
+              Find his gain in the transaction per year?</p></h4>
+      <input type="radio"  name="question1" >
+        <label >(A) 3500</label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1" id="A">
+         <label for="A">(B) 4000</label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) 4050</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1">
+         <label>(D) 5000</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <p>Let P, Q and R represent their respective monthly incomes. Then, we have:</p>
+                <p>P + Q = (5050 x 2) = 10100 .... (i)</p>
+                <p>Q + R = (6250 x 2) = 12500 .... (ii)</p>
+                <p>P + R = (5200 x 2) = 10400 .... (iii)</p>
+                <p>Adding (i), (ii) and (iii), we get: &nbsp;2(P + Q + R) = 33000 &nbsp;or &nbsp; P + Q + R = 16500 .... (iv)</p>
+                <p>Subtracting (ii) from (iv), we get P = 4000.</p>
+                <p><img src="images/aptitude/1-sym-tfr.gif"> P's monthly income = Rs. 4000.</p>
+                 </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. In Arun's opinion, his weight is greater than 65 kg but less than 72 kg. 
+          His brother doest not agree with Arun and he thinks that Arun's weight is greater than 60 kg but less than 70 kg. 
+          His mother's view is that his weight cannot be greater than 68 kg. If all are them are correct in their estimation, what is the average of different probable weights of Arun?</p></h4>
+         	
+        <input type="radio"  name="question1" id="f">
+          <label for="f">(A) 67 kg</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 68 kg</label><br/>
+     
+        <input type="radio" name="question1" >
+          <label >(C) 68 kg</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) None of these</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (A)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> <p>Let Arun's weight by X kg.</p>
+                <p>According to Arun, 65 &lt; X &lt; 72</p>
+                <p>According to Arun's brother, 60 &lt; X &lt; 70.</p>
+                <p>According to Arun's mother, X &lt;= 68</p>
+                <p>The values satisfying all the above conditions are 66, 67 and 68.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Required average =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">66 + 67 + 68</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">201</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 67 kg.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">3</td>
+                    <td class="ga-td-divisor">3</td>
+                 </tr> 
+                </tbody></table>
+                </p> </div>
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7. 	
+            A car owner buys petrol at Rs.7.50, Rs. 8 and Rs. 8.50 per litre for three successive years. What approximately is the average cost per litre of petrol if he spends Rs. 4000 each year? </p></h4>
+
+        <input type="radio"  name="question1" id="e">
+          <label  for="e">(A) Rs. 7.98</label>&nbsp;&nbsp;
+
+        <input type="radio"  name="question1" >
+          <label >(B) Rs. 8</label><br/>
+     
+        <input type="radio" name="question1" >
+          <label >(C) Rs. 8.50</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) Rs. 9</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (A)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     
+                     <tbody><tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal-rpad" align="left">Total quantity of petrol<br> consumed in 3 years</td>
+                      <td class="ga-td-normal" align="left">
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                        <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">=</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident">4000</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                            <td class="ga-td-divident">4000</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                            <td class="ga-td-divident">4000</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-line-rpad" rowspan="2">&nbsp;litres</td>
+                            
+                        </tr>
+                        <tr class="ga-tr-divisor" align="center">
+                             <td class="ga-td-divisor">7.50</td>
+                             <td class="ga-td-divisor">8</td>
+                             <td class="ga-td-divisor">8.50</td>
+                        </tr> 
+                        </tbody></table>
+                      </td>
+                     </tr>
+                     
+                     <tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal"></td>
+                      <td class="ga-td-normal" align="left">
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                        <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">= 4000</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident">2</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                            <td class="ga-td-divident">1</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                            <td class="ga-td-divident">2</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-line-rpad" rowspan="2">&nbsp;litres</td>
+                        </tr>
+                        <tr class="ga-tr-divisor" align="center">
+                             <td class="ga-td-divisor">15</td>
+                             <td class="ga-td-divisor">8</td>
+                             <td class="ga-td-divisor">17</td>
+                        </tr> 
+                        </tbody></table>
+                      </td>                   
+                     </tr>
+                    
+                     <tr class="ga-tr-normal" align="center">
+                      <td class="ga-td-normal"></td>
+                      <td class="ga-td-normal" align="left">
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                        <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2">=</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident">76700</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-line-rpad" rowspan="2">&nbsp;litres</td>
+                        </tr>
+                        <tr class="ga-tr-divisor" align="center">
+                             <td class="ga-td-divisor">51</td>
+                        </tr> 
+                        </tbody></table>
+                      </td>
+                     </tr>
+                    
+                    </tbody></table>
+                    </p>
+                    <p>Total amount spent = Rs. (3 x 4000) = Rs. 12000.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Average cost = Rs.</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                            <td class="ga-td-divident">12000 x 51</td>
+                            <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            <td class="ga-td-line-lrpad" rowspan="2">= Rs.</td>
+                            <td class="ga-td-divident">6120</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">&nbsp;&nbsp;= Rs. 7.98</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">76700</td>
+                        <td class="ga-td-divisor">767</td>
+                     </tr> 
+                    </tbody></table>
+                    </p> </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8. 	
+                A library has an average of 510 visitors on Sundays and 240 on other days. The average number of visitors per day in a month of 30 days beginning with a Sunday is: </p></h4>
+  
+          <input type="radio"  name="question1">
+            <label >(A) 250</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1"  >
+            <label >(B) 276</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 280</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1"  id="d">
+            <label for="d">(D) 285</label> 
+      
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (D)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> 
+                        <p>Since the month begins with a Sunday, to there will be five Sundays in the month.</p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                        
+                         <tbody><tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal-rpad" align="left">Required average</td>
+                          <td class="ga-td-normal" align="left">
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                            <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">=</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                                <td class="ga-td-divident" rowspan="1">510 x 5 + 240 x 25</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            </tr>
+                            <tr class="ga-tr-divisort" align="center">
+                                 <td class="ga-td-divisor">30</td>
+                            </tr> 
+                            </tbody></table>
+                          </td>
+                         </tr>
+                         
+                         <tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal"></td>
+                          <td class="ga-td-normal" align="left">
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                            <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">=</td>
+                                <td class="ga-td-divident">8550</td>
+                            </tr>
+                            <tr class="ga-tr-divisort" align="center">
+                                 <td class="ga-td-divisor">30</td>
+                            </tr> 
+                            </tbody></table>
+                          </td>
+                         </tr>
+                         
+                         <tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal"></td>
+                          <td class="ga-td-normal" align="left">= 285</td>
+                         </tr>
+                         
+                        </tbody></table>
+                        </p>
+                         </div>
+            </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9. If the average marks of three batches of 55, 60 and 45 students respectively is 50, 55, 60, then the average marks of all the students is:</p></h4>
+    
+            <input type="radio"  name="question1">
+              <label >(A) 53.33</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" id="g" >
+              <label for="g">(B) 54.68</label><br/>
+         
+            <input type="radio" name="question1" >
+              <label >(C) 55</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1"  >
+              <label >(D) None of these</label>
+
+        
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (B)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> 
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         
+                         <tbody><tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal-rpad" align="left">Required average</td>
+                          <td class="ga-td-normal" align="left">
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                            <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">=</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                                <td class="ga-td-divident" rowspan="1">55 x 50 + 60 x 55 + 45 x 60</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            </tr>
+                            <tr class="ga-tr-divisort" align="center">
+                                 <td class="ga-td-divisor">55 + 60 + 45</td>
+                            </tr> 
+                            </tbody></table>
+                          </td>
+                         </tr>
+                         
+                         <tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal"></td>
+                          <td class="ga-td-normal" align="left">
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0" align="left">
+                            <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">=</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                                <td class="ga-td-divident" rowspan="1">2750 + 3300 + 2700</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                            </tr>
+                            <tr class="ga-tr-divisort" align="center">
+                                 <td class="ga-td-divisor">160</td>
+                            </tr> 
+                            </tbody></table>
+                          </td>                   
+                         </tr>
+                        
+                         <tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal"></td>
+                          <td class="ga-td-normal" align="left">
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                            <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">=</td>
+                                <td class="ga-td-divident">8750</td>
+                            </tr>
+                            <tr class="ga-tr-divisort" align="center">
+                                 <td class="ga-td-divisor">160</td>
+                            </tr> 
+                            </tbody></table>
+                          </td>
+                         </tr>
+                         
+                         <tr class="ga-tr-normal" align="center">
+                          <td class="ga-td-normal"></td>
+                          <td class="ga-td-normal" align="left">= 54.68</td>
+                         </tr>
+                         
+                        </tbody></table>
+                         </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10. 	
+                    The average weight of A, B and C is 45 kg. If the average weight of A and B be 40 kg and that of B and C be 43 kg, then the weight of B is:</p></h4>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 17 kg</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" >
+                <label>(B) 20 kg</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) 26 kg</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1" id="h" >
+                <label for="h">(D) 31 kg</label>
+  
+          
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (D)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                            <p>Let A, B, C represent their respective weights. Then, we have:</p>
+                            <p>A + B + C = (45 x 3) = 135 .... (i)</p>
+                            <p>A + B = (40 x 2) = 80 .... (ii)</p>
+                            <p>B + C = (43 x 2) = 86 ....(iii)</p>
+                            <p>Adding (ii) and (iii), we get: A + 2B + C = 166 .... (iv)</p>
+                            <p>Subtracting (i) from (iv), we get : B = 31.</p>
+                            <p><img src="images/aptitude/1-sym-tfr.gif"> B's weight = 31 kg.</p>
+                            <p></p>
+                    </div>
+                </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1 style="font-weight: 600">Watch Vedio</h1>
+     <iframe width="660" height="315" src="https://www.youtube.com/embed/eT4U44eTDvo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    
+</body>
+</html>
+	

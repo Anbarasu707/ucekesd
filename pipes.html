@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pipes</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+    .bix-div-introduction p {
+        margin-top: 15px;
+    }
+    .bix-div-introduction p {
+        line-height: 1.7;
+        font-family: arial;
+    }
+    i.ga-bar, i.ga-def, i.ga-fhead {
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .bix-ans-description p
+    {
+        font-family: arial;
+        font-size: medium;
+    }
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Pipes and Cistern!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               <h3 style="font-weight: 600">Basic Formulas:</h3>
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+        <div class="bix-div-introduction">   
+            <ol type="1">  
+            <li>
+                <p><i class="ga-fhead">Inlet:</i></p>
+                <p>A pipe connected with a tank or a cistern or a reservoir, that fills it, is known as an inlet.</p>
+                <p><i class="ga-fhead">Outlet:</i></p>
+                <p>A pipe connected with a tank or cistern or reservoir, emptying it, is known as an outlet.</p>
+            </li>
+            <li>
+                <p>If a pipe can fill a tank in <i class="ga-var">x</i> hours, then:</p>
+                <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">part filled in 1 hour =</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                     </tr> 
+                    </tbody></table>
+                    
+                </p>
+            </li>
+            <li>
+                <p>If a pipe can empty a tank in <i class="ga-var">y</i> hours, then:</p>
+                <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">part emptied in 1 hour =</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor"><i class="ga-var">y</i></td>
+                     </tr> 
+                    </tbody></table>
+                </p>
+            </li>
+            <li>
+            <p>If a pipe can fill a tank in <i class="ga-var">x</i> hours and another pipe can empty the full tank in <i class="ga-var">y</i> hours (where <i class="ga-var">y</i> &gt; <i class="ga-var">x</i>), then on opening both the pipes, then</p>
+            <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">the net part filled in 1 hour =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line" rowspan="2">.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor"><i class="ga-var">y</i></td>
+                 </tr> 
+                </tbody></table>
+            </p>
+            </li>
+            <li>
+            <p>If a pipe can fill a tank in <i class="ga-var">x</i> hours and another pipe can empty the full tank in <i class="ga-var">y</i> hours (where <i class="ga-var">x</i> &gt; <i class="ga-var">y</i>), then on opening both the pipes, then</p>
+            <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">the net part emptied in 1 hour =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line" rowspan="2">.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">y</i></td>
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                 </tr> 
+                </tbody></table>
+            </p>
+            </li>
+            </ol>
+        </div>
+    </div>
+    <h3 style="font-weight: 600">General Questions:</h3>
+    <div class="scp-quizzes-data">
+  <h4>1. 	
+    Two pipes A and B can fill a cistern in 37 minutes and 45 minutes respectively. Both pipes are opened. The cistern will be filled in just half an hour, if the B is turned off after:</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) 5 min</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="C">
+       <label for="C">(B) 9 min</label><br/>
+        
+    <input type="radio"  name="question1">
+       <label >(C) 11 min.</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 12 min</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> 
+                    <p>Let B be turned off after <i class="ga-var">x</i> minutes. Then,</p>
+                    <p>Part filled by (A + B) in <i class="ga-var">x</i> min. + Part filled by A in (30 -<i class="ga-var">x</i>) min. = 1.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> <i class="ga-var">x</i></td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">+ (30 - <i class="ga-var">x</i>).</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">= 1</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">75</td>
+                        <td class="ga-td-divisor">45</td>
+                        <td class="ga-td-divisor">75</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                        <td class="ga-td-divident">11<i class="ga-var">x</i></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                        <td class="ga-td-divident">(60 -2<i class="ga-var">x</i>)</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">= 1</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">225</td>
+                        <td class="ga-td-divisor">75</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> 11<i class="ga-var">x</i> + 180 - 6<i class="ga-var">x</i> = 225.</p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 9.</p>
+                </div>   
+            </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2. A tank is filled by three pipes with uniform flow. The first two pipes operating simultaneously fill the tank in the same time during which the tank is filled by the third pipe alone. The second pipe fills the tank 5 hours faster than the first pipe and 4 hours slower than the third pipe. The time required by the first pipe is:</h4>
+        <br/>
+   
+        <input type="radio"  name="question1" >
+       <label  >(A) 6 hours</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 10 hours</label><br/>
+        
+    <input type="radio" name="question1" id="a">
+       <label for="a">(C) 15 hours</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label >(D) 30 hours</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <p>Suppose, first pipe alone takes <i class="ga-var">x</i> hours to fill the tank .</p>
+                <p>Then, second and third pipes will take (<i class="ga-var">x</i> -5) and (<i class="ga-var">x</i> - 9) hours respectively to fill the tank.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor">(<i class="ga-var">x</i> - 5)</td>
+                    <td class="ga-td-divisor">(<i class="ga-var">x</i> - 9)</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i> - 5 + <i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i>(<i class="ga-var">x</i> - 5)</td>
+                    <td class="ga-td-divisor">(<i class="ga-var">x</i> - 9)</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> (2<i class="ga-var">x</i> - 5)(<i class="ga-var">x</i> - 9) = <i class="ga-var">x</i>(<i class="ga-var">x</i> - 5)</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i><sup>2</sup> - 18<i class="ga-var">x</i> + 45 = 0</p>
+                <p>(<i class="ga-var">x</i> - 15)(<i class="ga-var">x</i> - 3) = 0</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 15. &nbsp; &nbsp;[neglecting <i class="ga-var">x</i> = 3]</p>
+            </div> 
+            </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. 	
+            Two pipes can fill a tank in 20 and 24 minutes respectively and a waste pipe can empty 3 gallons per minute. All the three pipes working together can fill the tank in 15 minutes. The capacity of the tank is:</p></h4>
+         
+         <input type="radio"  name="question1">
+       <label >(A) 60 gallons</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" >
+       <label >(B) 90 gallons</label><br/>
+        
+    <input type="radio" name="question1" id="b">
+       <label for="b">(C) 120  gallons</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label>(D) 180  gallons</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+             <div class="bix-ans-description"> 
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Work done by the waste pipe in 1 minute =</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">15</td>
+                    <td class="ga-td-divisor">20</td>
+                    <td class="ga-td-divisor">24</td>
+                
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-lrpad" rowspan="2">&nbsp; &nbsp; =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                    <td class="ga-td-divident">11</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">15</td>
+                    <td class="ga-td-divisor">120</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-lpad" rowspan="2">&nbsp; &nbsp; = -&nbsp;</td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line" rowspan="2">.&nbsp; &nbsp; [-ve sign means emptying]</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">40</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Volume of </td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lpad" rowspan="2">part = 3 gallons.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">40</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>Volume of whole = (3 x 40) gallons = 120 gallons.</p>
+            </div>
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+          <h4>4. A tank is filled in 5 hours by three pipes A, B and C. The pipe C is twice as fast as B and B is twice as fast as A. How much time will pipe A alone take to fill the tank?</h4>
+          
+                <input type="radio"  name="question1">
+                    <label >(A) 20 Hours</label>&nbsp;&nbsp;
+                    
+                <input type="radio"  name="question1">
+                    <label >(B) 25 Hours</label><br/>
+                    
+                <input type="radio" name="question1" id="B">
+                    <label for="B">(C) 35 Hours</label>&nbsp;&nbsp;
+                    
+                <input type="radio" name="question1">
+                    <label>(D) None of these</label> 
+                
+  
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <p>Suppose pipe A alone takes <i class="ga-var">x</i> hours to fill the tank.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then, pipes B and C will take</td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">and</td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lpad" rowspan="2">hours respectively to fill the tank.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">2</td>
+                    <td class="ga-td-divisor">4</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                    <td class="ga-td-divident">1</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident">2</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident">4</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor">5</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                    <td class="ga-td-divident">7</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">1</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor">5</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 35 hrs.</p>
+                 </div>
+            </ul>
+        </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4>5. Two pipes A and B can fill a tank in 20 and 30 minutes respectively. If both the pipes are used together, then how long will it take to fill the tank?</h4>
+                <input type="radio"  name="question1" id="A">
+                    <label for="A">(A) 12 min</label>&nbsp;&nbsp;
+                    
+                <input type="radio"  name="question1">
+                    <label>(B) 15 min</label><br/>
+                    
+                <input type="radio" name="question1" >
+                    <label >(C) 25 min</label>&nbsp;&nbsp;
+                    
+                <input type="radio" name="question1">
+                    <label>(D) 50 min</label> 
+                
+            
+        <div> <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Part filled by A in 1 min =</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">20</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Part filled by B in 1 min =</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">30</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Part filled by (A + B) in 1 min =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">20</td>
+                        <td class="ga-td-divisor">30</td>
+                        <td class="ga-td-divisor">12</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> Both pipes can fill the tank in 12 minutes.</p>
+                </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. Two pipes A and B can fill a tank in 15 minutes and 20 minutes respectively. Both the pipes are opened together but after 4 minutes, pipe A is turned off. What is the total time required to fill the tank?</p></h4>
+         	
+        <input type="radio"  name="question1">
+          <label >(A) 10 min. 20 sec.</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 11 min. 45 sec.</label><br/>
+     
+        <input type="radio" name="question1">
+          <label for="f">(C) 12 min. 30 sec.</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" id="f" >
+          <label for="f">(D) 14 min.40 sec.</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (D)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> 
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line" rowspan="2">Part filled in 4 minutes = 4</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">7</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">15</td>
+                        <td class="ga-td-divisor">20</td>
+                        <td class="ga-td-divisor">15</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Remaining part =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-line-rpad" rowspan="2">1 -</td>
+                        <td class="ga-td-divident">7</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">8</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">15</td>
+                        <td class="ga-td-divisor">15</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Part filled by B in 1 minute =</td>
+                        <td class="ga-td-divident">1</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">20</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">:</td>
+                        <td class="ga-td-divident">8</td>
+                        <td class="ga-td-line-lrpad" rowspan="2"><b>::</b> 1 : <i class="ga-var">x</i></td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">20</td>
+                        <td class="ga-td-divisor">15</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">8</td>
+                        <td class="ga-td-line-lpad" rowspan="2">x 1 x 20</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lpad" rowspan="2">= 10</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">min = 10 min. 40 sec.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">15</td>
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> The tank will be full in (4 min. + 10 min. + 40 sec.) = 14 min. 40 sec.</p>
+                </div>
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7. Three pipes A, B and C can fill a tank in 6 hours. After working at it together for 2 hours, C is closed and A and B can fill the remaining part in 7 hours. The number of hours taken by C alone to fill the tank is:</p></h4>
+
+        <input type="radio"  name="question1">
+          <label >(A) 10</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 12</label><br/>
+     
+        <input type="radio" name="question1" id="e">
+          <label for="e">(C) 14</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) 16</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (C)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> 
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Part filled in 2 hours =</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">1</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">6</td>
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Remaining part =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-line-rpad" rowspan="2">1 -</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">3</td>
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> (A + B)'s 7 hour's work =</td>
+                        <td class="ga-td-divident">2</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">(A + B)'s 1 hour's work =</td>
+                        <td class="ga-td-divident">2</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">21</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> C's 1 hour's work = { (A + B + C)'s 1 hour's work } - { (A + B)'s 1 hour's work }</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;&nbsp; =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">1</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">6</td>
+                        <td class="ga-td-divisor">21</td>
+                        <td class="ga-td-divisor">14</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-tfr.gif"> C alone can fill the tank in 14 hours.</p>
+                </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8. A tap can fill a tank in 6 hours. After half the tank is filled, three more similar taps are opened. What is the total time taken to fill the tank completely?</p></h4>
+          <input type="radio"  name="question1">
+            <label >(A) 3 hrs 15 min</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1" id="d" >
+            <label for="d">(B) 3 hrs 45 min</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 4 hrs</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" >
+            <label>(D) 4 hrs 15 min</label> 
+
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (B)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> <p>Time taken by one tap to fill <b class="ib-gray">half of the tank</b> = 3 hrs.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Part filled by the four taps in 1 hour = </td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-line-rpad" rowspan="2">4 x</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">6</td>
+                        <td class="ga-td-divisor">3</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Remaining part =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-line-rpad" rowspan="2">1 -</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line" rowspan="2">.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">2</td>
+                        <td class="ga-td-divisor">2</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                        <td class="ga-td-divident">2</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">:</td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2"><b>::</b> 1 : <i class="ga-var">x</i></td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">3</td>
+                        <td class="ga-td-divisor">2</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">1</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">x 1 x</td>
+                        <td class="ga-td-divident">3</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                        <td class="ga-td-divident">3</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">hours <i>i.e.,</i> 45 mins.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">2</td>
+                        <td class="ga-td-divisor">2</td>
+                        <td class="ga-td-divisor">4</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>So, total time taken = 3 hrs. 45 mins.</p> 
+                </div>
+            </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9.  	
+                One pipe can fill a tank three times as fast as another pipe. If together the two pipes can fill the tank in 36 minutes, then the slower pipe alone will be able to fill the tank in:</p></h4>
+    
+            <input type="radio"  name="question1">
+              <label >(A) 81 min</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" >
+              <label>(B) 108 min</label><br/>
+         
+            <input type="radio" name="question1" id="g">
+              <label for="g">(C) 144 min</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1"  >
+              <label >(D) 192 min</label>
+
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (C)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> 
+                        <p>Let the slower pipe alone fill the tank in <i class="ga-var">x</i> minutes.</p>
+                        <p><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                            <tbody><tr class="ga-tr-divident" align="center">
+                               <td class="ga-td-line-rpad" rowspan="2">Then, faster pipe will fill it in</td>
+                               <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                               <td class="ga-td-line-lrpad" rowspan="2">minutes.</td>
+                            </tr>
+                            <tr class="ga-tr-divisor" align="center">
+                               <td class="ga-td-divisor">3</td>
+                            </tr> 
+                           </tbody></table>
+                        </p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                            <td class="ga-td-divident">1</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                            <td class="ga-td-divident">3</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                            <td class="ga-td-divident">1</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                            <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                            <td class="ga-td-divisor">36</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        <p>
+                        <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                         <tbody><tr class="ga-tr-divident" align="center">
+                            <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                            <td class="ga-td-divident">4</td>
+                            <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                            <td class="ga-td-divident">1</td>
+                         </tr>
+                         <tr class="ga-tr-divisor" align="center">
+                            <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                            <td class="ga-td-divisor">36</td>
+                         </tr> 
+                        </tbody></table>
+                        </p>
+                        <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 144 min.</p>
+                    </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10. A large tanker can be filled by two pipes A and B in 60 minutes and 40 minutes respectively. How many minutes will it take to fill the tanker from empty state if B is used for half the time and A and B fill it together for the other half?</p></h4>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 15 min</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" >
+                <label>(B) 20 min</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) 27.5 min</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1" id="h" >
+                <label for="h">(D) 30 min</label>
+  
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (D)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                            <p>
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                             <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">Part filled by (A + B) in 1 minute =</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                                <td class="ga-td-divident">1</td>
+                                <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                                <td class="ga-td-divident">1</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                                <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                                <td class="ga-td-divident">1</td>
+                                <td class="ga-td-line" rowspan="2">.</td>
+                             </tr>
+                             <tr class="ga-tr-divisor" align="center">
+                                <td class="ga-td-divisor">60</td>
+                                <td class="ga-td-divisor">40</td>
+                                <td class="ga-td-divisor">24</td>
+                             </tr> 
+                            </tbody></table>
+                            </p>
+                            <p>Suppose the tank is filled in <i class="ga-var">x</i> minutes.</p>
+                            <p>
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                             <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2">Then,</td>
+                                <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                                <td class="ga-td-divident">1</td>
+                                <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                                <td class="ga-td-divident">1</td>
+                                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                                <td class="ga-td-line-lrpad" rowspan="2">= 1</td>
+                             </tr>
+                             <tr class="ga-tr-divisor" align="center">
+                                <td class="ga-td-divisor">2</td>
+                                <td class="ga-td-divisor">24</td>
+                                <td class="ga-td-divisor">40</td>
+                             </tr> 
+                            </tbody></table>
+                            </p>
+                            <p>
+                            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                             <tbody><tr class="ga-tr-divident" align="center">
+                                <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                                <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                                <td class="ga-td-line-lrpad" rowspan="2">x</td>
+                                <td class="ga-td-divident">1</td>
+                                <td class="ga-td-line-lrpad" rowspan="2">= 1</td>
+                             </tr>
+                             <tr class="ga-tr-divisor" align="center">
+                                <td class="ga-td-divisor">2</td>
+                                <td class="ga-td-divisor">15</td>
+                             </tr> 
+                            </tbody></table>
+                            </p>
+                            <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 30 min.</p>
+                            </div>
+                </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1 style="font-weight:600">Watch Vedio</h1>
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/iohMfPzU8t8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
+     
+    
+    
+</body>
+</html>
+	

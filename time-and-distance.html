@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>time and distance</title>
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <script src="/_files/js/js-res-10.js" type="text/javascript"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
+	</script>
+    <style>
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+section {
+  height: 100vh;
+  background: white;
+}
+section span {
+  margin: 0;
+  font-size: 400%;
+  text-align: center;
+  line-height: 1;
+  padding-top: calc(50vh - 20pt);
+  display: block;
+  font-weight: 700;
+}
+header {
+  width: 100%;
+  padding: 1em;
+  font-size: 140%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transition: opacity .2s ease-in-out;
+  text-align: center;
+}
+header h1 {
+  font-weight: 600;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+nav a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  opacity: .7;
+  padding: 0 .5em;
+  color: black;
+  transition: opacity .2s ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+article {
+  margin: 5em auto 0;
+  padding: 1em;
+  font-size: 140%;
+  max-width: 800px;
+  background: white;
+  box-shadow: rgba(0,0,0,.05) 0 3px 15px;
+}
+article p {
+  margin: 0;
+  color: #333;
+}
+article p + p {
+  margin-top: .7em;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: left;
+  }
+  nav {
+    float: right;
+  }
+  article {
+    margin: 3.5em auto 0;
+    padding: 2em;
+  }
+}
+@media (min-width: 800px) {
+  article {
+    margin: 3.5em auto;
+  }
+}
+
+    
+    .scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}	 
+.scp-quizzes-data{ 
+box-shadow: 0px 1px 3px -1px #DCDCDC;
+padding:10px;
+margin-top:15px;
+}
+pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
+ input[type=radio] {
+    display:none; 
+}
+input[type=radio] + label {
+    display:inline-block;
+	width:30%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+input[type=radio] + label:hover{ border:1px solid #000000;}
+input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+    label{
+        font-family:serif;
+        font-weight: 50;
+    } 
+    li.list-group-item{
+        font-family:serif;
+        width: 20%;
+    }
+ 
+    .ga-td-divident {
+    border-bottom: 1px solid #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+    vertical-align: bottom;
+    padding-bottom: 2px;
+}
+.ga-td-line {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.di-td-line, .ga-td-line, .tbl-tech-ref th, div.div-sub-menu a, div.search-holder, table.di-tbl-answer td, table.ga-tbl-answer tr.ga-td-divisor, table.ga-tbl-answer tr.ga-tr-divident {
+    white-space: nowrap;
+} 
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    font-variant: normal;
+}
+ 
+.ga-td-divisor {
+    vertical-align: top;
+    padding-top: 2px;
+}
+.ga-td-line-rpad {
+    padding-right: 7px;
+}
+.ga-img-embed, .ga-td-line-lpad, .ga-td-line-lrpad, .ga-td-line-rpad, .ga-td-xmark {
+    vertical-align: middle;
+}
+.ga-td-upline {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}   
+    .bix-div-introduction p {
+        margin-top: 15px;
+    }
+    .bix-div-introduction p {
+        line-height: 1.7;
+        font-family: arial;
+    }
+    i.ga-bar, i.ga-def, i.ga-fhead {
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .bix-ans-description p
+    {
+        font-family: arial;
+        font-size: medium;
+    }
+    
+    </style>
+   
+</head>
+
+<body>
+        <section>
+                <span>Problems On Time and Distance!</span>
+        </section>
+              <header>
+                <h1></h1>
+              </header>
+<article>
+               <h3 style="font-weight: 600">Basic Formulas:</h3>
+ <div class="scp-quizzes-main">
+    <div class="scp-quizzes-data">
+        <div class="bix-div-introduction">   
+
+            <ol type="1">  
+            <li>
+            <p><i class="ga-fhead">Speed, Time and Distance:</i></p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">Speed =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident">Distance</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-line" rowspan="2">,</td>
+                <td class="ga-td-line-lrpad" rowspan="2">Time =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident">Distance</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-line" rowspan="2">,</td>
+                <td class="ga-td-line-lrpad" rowspan="2">Distance = (Speed x Time).</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">Time</td>
+                <td class="ga-td-divisor">Speed</td>
+             </tr> 
+            </tbody></table>
+            </p></li>
+            <li>
+            <p><i class="ga-fhead">km/hr to m/sec conversion:</i></p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> km/hr =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> x</td>
+                <td class="ga-td-divident">5</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-line-lpad" rowspan="2">m/sec.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">18</td>
+             </tr> 
+            </tbody></table>
+            
+            </p></li>
+            <li>
+            <p><i class="ga-fhead">m/sec to km/hr conversion:</i></p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> m/sec =</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-line-rpad" rowspan="2"><i class="ga-var">x</i> x</td>
+                <td class="ga-td-divident">18</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-line-lpad" rowspan="2">km/hr.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor">5</td>
+             </tr> 
+            </tbody></table>
+            
+            </p></li>
+            <li>
+            <p>If the ratio of the speeds of A and B is <i class="ga-var">a</i> : <i class="ga-var">b</i>, then the ratio of the</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">the times taken by then to cover the same distance is</td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line-lrpad" rowspan="2">:</td>
+                <td class="ga-td-divident">1</td>
+                <td class="ga-td-line-lrpad" rowspan="2">or <i class="ga-var">b</i> : <i class="ga-var">a</i>.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor"><i class="ga-var">a</i></td>
+                <td class="ga-td-divisor"><i class="ga-var">b</i></td>
+             </tr> 
+            </tbody></table>
+            
+            </p>
+            </li>
+            <li>
+            <p>Suppose a man covers a certain distance at <i class="ga-var">x</i> km/hr and an equal distance at <i class="ga-var">y</i> km/hr. Then,</p>
+            <p>
+            <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+             <tbody><tr class="ga-tr-divident" align="center">
+                <td class="ga-td-line-rpad" rowspan="2">the average speed during the whole journey is</td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                <td class="ga-td-divident">2<i class="ga-var">xy</i></td>
+                <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                <td class="ga-td-line-lpad" rowspan="2">km/hr.</td>
+             </tr>
+             <tr class="ga-tr-divisor" align="center">
+                <td class="ga-td-divisor"><i class="ga-var">x</i> + <i class="ga-var">y</i></td>
+             </tr> 
+            </tbody></table>
+            </p>
+            </li>
+            </ol>
+            
+            </div>
+    </div>
+    <h3 style="font-weight: 600">General Questions:</h3>
+    <div class="scp-quizzes-data">
+  <h4>1.  A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?</h4>
+    <br/>
+    <input type="radio"  name="question1">
+       <label>(A) 3.6</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="C">
+       <label for="C">(B) 7.2</label><br/>
+        
+    <input type="radio" name="question1">
+       <label >(C) 8.4</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 10</label> 
+     
+        <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" style="color:orangered;font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+                <p class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</p><br>
+                <div class="bix-ans-description"> <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Speed =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">600</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">m/sec.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">5 x 60</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>&nbsp;&nbsp; = 2 m/sec.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">&nbsp;&nbsp; =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-line-rpad" rowspan="2">2 x</td>
+                        <td class="ga-td-divident">18</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                        <td class="ga-td-line" rowspan="2">km/hr</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">5</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>&nbsp;&nbsp; = 7.2 km/hr.</p>
+                    </div>
+            </ul>
+       </div></div>    
+         
+ </div>
+ 
+    <div class="scp-quizzes-data">
+        <h4>2. If a person walks at 14 km/hr instead of 10 km/hr, he would have walked 20 km more. The actual distance travelled by him is:</h4>
+        <br/>
+   
+        <input type="radio"  name="question1" id="a">
+       <label for="a" >(A) 50 km</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1">
+       <label>(B) 56 km</label><br/>
+        
+    <input type="radio" name="question1">
+       <label>(C) 70 km</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label >(D) 80 km</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse1" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (A)</li><br>
+             <h4 class="panel-title" style="color:#0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> 
+                <p>Let the actual distance travelled be <i class="ga-var">x</i> km.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then,</td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i> + 20</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">10</td>
+                    <td class="ga-td-divisor">14</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 14<i class="ga-var">x</i> = 10<i class="ga-var">x</i> + 200</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 4<i class="ga-var">x</i> = 200</p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 50 km.</p>
+                </div>
+            </ul>
+       </div></div> 
+     </div>
+     
+    <div class="scp-quizzes-data">
+         <h4> <p>3. A train can travel 50% faster than a car. Both start from point A at the same time and reach point B 75 kms away from A at the same time. On the way, however, the train lost about 12.5 minutes while stopping at the stations. The speed of the car is:</p></h4>      
+         <input type="radio"  name="question1">
+       <label >(A) 100 kmph</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="b">
+       <label for="b">(B) 110 kmph</label><br/>
+        
+    <input type="radio" name="question1" id="b">
+       <label for="b">(C) 120 kmph</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1" >
+       <label>(D) 130 kmph</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse3" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse3" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (C)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br/>
+             <div class="bix-ans-description"> 
+                <p>Let speed of the car be <i class="ga-var">x</i> kmph.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Then, speed of the train =</td>
+                    <td class="ga-td-divident">150</td>
+                    <td class="ga-td-line" rowspan="2"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">3</td>
+                    <td class="ga-td-line" rowspan="2"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">kmph.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">100</td>
+                    <td class="ga-td-divisor">2</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> </td>
+                    <td class="ga-td-divident">75</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                    <td class="ga-td-divident">75</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">125</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor">(3/2)<i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor">10 x 60</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                    <td class="ga-td-divident">75</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                    <td class="ga-td-divident">50</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">5</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                    <td class="ga-td-divisor">24</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">25 x24</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 120 kmph.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">5</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+            </div>
+          </ul>
+       </div></div> 
+     
+     </div>
+     
+    <div class="scp-quizzes-data">
+          
+          <h4>4.  Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?</h4>
+          
+    <input type="radio"  name="question1">
+       <label >(A) 9</label>&nbsp;&nbsp;
+        
+    <input type="radio"  name="question1" id="B">
+       <label for="B">(B) 10</label><br/>
+        
+    <input type="radio" name="question1" >
+       <label>(C) 12</label>&nbsp;&nbsp;
+        
+    <input type="radio" name="question1">
+       <label>(D) 20</label> 
+       
+  
+  <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse4" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse4" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br/>
+             <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>Due to stoppages, it covers 9 km less.</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Time taken to cover 9 km =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">9</td>
+                    <td class="ga-td-line-lpad" rowspan="2">x 60</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">min</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 10 min.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">54</td>
+                 </tr> 
+                </tbody></table>
+                </p> 
+            </div>
+            </ul>
+      </div></div> </div>
+     
+      <div class="scp-quizzes-data">
+          <h4>5.  A man complete a journey in 10 hours. He travels first half of the journey at the rate of 21 km/hr and second half at the rate of 24 km/hr. Find the total journey in km.</h4>
+      <input type="radio"  name="question1">
+        <label >(A) 220 km</label>&nbsp;&nbsp;
+        
+      <input type="radio"  name="question1" id="A">
+         <label for="A">(B) 224 km</label><br/>
+        
+      <input type="radio" name="question1" >
+         <label >(C) 230 km</label>&nbsp;&nbsp;
+        
+      <input type="radio" name="question1">
+         <label>(D) 234 km</label> 
+       
+  
+      <div> <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5" style="color:orangered; font-weight: bold">View answer</a>
+          </h4>
+         </div>
+          <div id="collapse5" class="panel-collapse collapse">
+          <ul class="list-group" > 
+             <li class="list-group-item">Ans: (B)</li><br>
+             <h4 class="panel-title" style="color: #0C0;font-weight:bold;font-family: Arial, Helvetica, sans-serif">Explanation</h4><br>
+             <div class="bix-ans-description"> <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-divident">(1/2)<i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident">(1/2)<i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 10</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">21</td>
+                    <td class="ga-td-divisor">24</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> </td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 20</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">21</td>
+                    <td class="ga-td-divisor">24</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p><img src="images/aptitude/1-sym-imp.gif"> 15<i class="ga-var">x</i> = 168 x 20</p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">168 x 20</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 224 km.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">15</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                </div>
+          </ul>
+      </div></div>
+    </div>
+     
+    <div class="scp-quizzes-data">
+      <h4> <p>6. The ratio between the speeds of two trains is 7 : 8. If the second train runs 400 km in 4 hours, then the speed of the first train is:</p></h4>
+         	
+        <input type="radio"  name="question1">
+          <label >(A) 70 km/hr</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 75 km/hr</label><br/>
+     
+        <input type="radio" name="question1">
+          <label >(C) 84 km/hr</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" id="f" >
+          <label for="f">(D) 87.5 km/hr</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse6" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (D)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>      <br>
+              <div class="bix-ans-description"> <p>Let the speed of two trains be 7<i class="ga-var">x</i> and 8<i class="ga-var">x</i> km/hr.</p>
+                <p><table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                    <tbody><tr class="ga-tr-divident" align="center">
+                       <td class="ga-td-line-rpad" rowspan="2">Then, 8<i class="ga-var">x</i> =</td>
+                       <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                       <td class="ga-td-divident">400</td>
+                       <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                       <td class="ga-td-line-lrpad" rowspan="2">= 100</td>
+                    </tr>
+                    <tr class="ga-tr-divisor" align="center">
+                       <td class="ga-td-divisor">4</td>
+                    </tr> 
+                   </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">100</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif"></td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 12.5</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">8</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <img src="images/aptitude/1-sym-tfr.gif"> Speed of first train = (7 x 12.5) km/hr = 87.5 km/hr.</p> 
+            </div>
+            </ul>
+      </div></div> 
+    </div>
+
+    <div class="scp-quizzes-data">
+      <h4> <p>7. A man on tour travels first 160 km at 64 km/hr and the next 160 km at 80 km/hr. The average speed for the first 320 km of the tour is: </p>
+
+        <input type="radio"  name="question1">
+          <label >(A) 35.55 km/hr</label>&nbsp;&nbsp;
+     
+        <input type="radio"  name="question1" >
+          <label >(B) 36 km/hr</label><br/>
+     
+        <input type="radio" name="question1" id="e">
+          <label for="e">(C) 71.11 km/hr</label>&nbsp;&nbsp;
+     
+        <input type="radio" name="question1" >
+          <label>(D) 71 km/hr</label> 
+    
+    <div> <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7" style="color:orangered; font-weight: bold">View answer</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <ul class="list-group" > 
+              <li class="list-group-item">Ans: (C)</li><br/>
+              <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4>  <br>    
+              <div class="bix-ans-description"> <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2">Total time taken =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-divident">160</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                    <td class="ga-td-divident">160</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">hrs.</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">=</td>
+                    <td class="ga-td-divident">9</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">hrs.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">64</td>
+                    <td class="ga-td-divisor">80</td>
+                    <td class="ga-td-divisor">2</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                <p>
+                <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                 <tbody><tr class="ga-tr-divident" align="center">
+                    <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Average speed =</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                    <td class="ga-td-line-rpad" rowspan="2">320 x</td>
+                    <td class="ga-td-divident">2</td>
+                    <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">km/hr</td>
+                    <td class="ga-td-line-lrpad" rowspan="2">= 71.11 km/hr.</td>
+                 </tr>
+                 <tr class="ga-tr-divisor" align="center">
+                    <td class="ga-td-divisor">9</td>
+                 </tr> 
+                </tbody></table>
+                </p>
+                </div>
+            </ul>
+      </div></div> 
+    </div>    
+
+    <div class="scp-quizzes-data">
+        <h4> <p>8.  In covering a distance of 30 km, Abhay takes 2 hours more than Sameer. If Abhay doubles his speed, then he would take 1 hour less than Sameer. Abhay's speed is: </p>
+  
+          <input type="radio"  name="question1">
+            <label >(A) 5 kmph</label>&nbsp;&nbsp;
+       
+          <input type="radio"  name="question1" id="d" >
+            <label for="d">(B) 6 kmph</label><br/>
+       
+          <input type="radio" name="question1" >
+            <label >(C) 6.25 kmph</label>&nbsp;&nbsp;
+       
+          <input type="radio" name="question1" >
+            <label>(D) 7.5 kmph</label> 
+      
+      <div> <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse8" style="color:orangered; font-weight: bold">View answer</a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <ul class="list-group" > 
+                <li class="list-group-item">Ans: (A)</li><br/>
+                <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                <div class="bix-ans-description"> <p>Let Abhay's speed be <i class="ga-var">x</i> km/hr.</p>
+                  <p>
+                  <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                   <tbody><tr class="ga-tr-divident" align="center">
+                      <td class="ga-td-line-rpad" rowspan="2">Then,</td>
+                      <td class="ga-td-divident">30</td>
+                      <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                      <td class="ga-td-divident">30</td>
+                      <td class="ga-td-line-lrpad" rowspan="2">= 3</td>
+                   </tr>
+                   <tr class="ga-tr-divisor" align="center">
+                      <td class="ga-td-divisor"><i class="ga-var">x</i></td>
+                      <td class="ga-td-divisor">2<i class="ga-var">x</i></td>
+                   </tr> 
+                  </tbody></table>
+                  </p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> 6<i class="ga-var">x</i> = 30</p>
+                  <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 5 km/hr.</p>
+                </div>
+              </ul>
+        </div></div> 
+      </div>
+
+      <div class="scp-quizzes-data">
+          <h4> <p>9.  Robert is travelling on his cycle and has calculated to reach point A at 2 P.M. if he travels at 10 kmph, he will reach there at 12 noon if he travels at 15 kmph. At what speed must he travel to reach A at 1 P.M.?</p></h4>
+    
+            <input type="radio"  name="question1">
+              <label >(A) 8 kmph</label>&nbsp;&nbsp;
+         
+            <input type="radio"  name="question1" >
+              <label>(B) 11 kmph</label><br/>
+         
+            <input type="radio" name="question1" >
+              <label >(C) 12 kmph</label>&nbsp;&nbsp;
+         
+            <input type="radio" name="question1" id="g" >
+              <label for="g">(D) 14 kmph</label>
+
+        <div> <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse9" style="color:orangered; font-weight: bold">View answer</a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <ul class="list-group" > 
+                  <li class="list-group-item">Ans: (C)</li><br>
+                  <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                  <div class="bix-ans-description"> <p>Let the distance travelled by <i class="ga-var">x</i> km.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Then,</td>
+                        <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">-</td>
+                        <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                        <td class="ga-td-line-lrpad" rowspan="2">= 2</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">10</td>
+                        <td class="ga-td-divisor">15</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> 3<i class="ga-var">x</i> - 2<i class="ga-var">x</i> = 60</p>
+                    <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 60 km.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2">Time taken to travel 60 km at 10 km/hr =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">60</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">hrs</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">= 6 hrs.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">10</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                    <p>So, Robert started 6 hours before 2 P.M. <i>i.e.,</i> at 8 A.M.</p>
+                    <p>
+                    <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                     <tbody><tr class="ga-tr-divident" align="center">
+                        <td class="ga-td-line-rpad" rowspan="2"><img src="images/aptitude/1-sym-tfr.gif"> Required speed =</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-oparen-h1.gif"></td>
+                        <td class="ga-td-divident">60</td>
+                        <td class="ga-td-line" rowspan="2"><img src="images/aptitude/1-sym-cparen-h1.gif">kmph.</td>
+                        <td class="ga-td-line-lrpad" rowspan="2">= 12 kmph.</td>
+                     </tr>
+                     <tr class="ga-tr-divisor" align="center">
+                        <td class="ga-td-divisor">5</td>
+                     </tr> 
+                    </tbody></table>
+                    </p>
+                  </div>
+                </ul>
+          </div></div> 
+        </div>
+
+        <div class="scp-quizzes-data">
+            <h4> <p>10.  A farmer travelled a distance of 61 km in 9 hours. He travelled partly on foot @ 4 km/hr and partly on bicycle @ 9 km/hr. The distance travelled on foot is:</p></h4>
+      
+              <input type="radio"  name="question1">
+                <label >(A) 14 km</label>&nbsp;&nbsp;
+           
+              <input type="radio"  name="question1" >
+                <label>(B) 15 km</label><br/>
+           
+              <input type="radio" name="question1" >
+                <label >(C) 16 km</label>&nbsp;&nbsp;
+           
+              <input type="radio" name="question1" id="h" >
+                <label for="h">(D) 17 km</label>
+  
+          <div> <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse10" style="color:orangered; font-weight: bold">View answer</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <ul class="list-group" > 
+                    <li class="list-group-item">Ans: (C)</li><br>
+                    <h4 class="panel-title" style="color: #0C0;font-weight: bold">Explanation:</h4><br>      
+                    <div class="bix-ans-description"> 
+                      <p>Let the distance travelled on foot be <i class="ga-var">x</i> km.</p>
+                      <p>Then, distance travelled on bicycle = (61 -<i class="ga-var">x</i>) km.</p>
+                      <p>
+                      <table class="ga-tbl-answer" cellpadding="0" cellspacing="0">
+                       <tbody><tr class="ga-tr-divident" align="center">
+                          <td class="ga-td-line-rpad" rowspan="2">So,</td>
+                          <td class="ga-td-divident"><i class="ga-var">x</i></td>
+                          <td class="ga-td-line-lrpad" rowspan="2">+</td>
+                          <td class="ga-td-divident">(61 -<i class="ga-var">x</i>)</td>
+                          <td class="ga-td-line-lrpad" rowspan="2">= 9</td>
+                       </tr>
+                       <tr class="ga-tr-divisor" align="center">
+                          <td class="ga-td-divisor">4</td>
+                          <td class="ga-td-divisor">9</td>
+                       </tr> 
+                      </tbody></table>
+                      </p>
+                      <p><img src="images/aptitude/1-sym-imp.gif"> 9<i class="ga-var">x</i> + 4(61 -<i class="ga-var">x</i>) = 9 x 36</p>
+                      <p><img src="images/aptitude/1-sym-imp.gif"> 5<i class="ga-var">x</i> = 80</p>
+                      <p><img src="images/aptitude/1-sym-imp.gif"> <i class="ga-var">x</i> = 16 km.</p>
+                    </div>
+                  </ul>
+            </div></div> 
+          </div>
+
+  </div>
+  
+      <h1 style="font-weight:600">Watch Vedio</h1> 
+      <iframe width="660" height="315" src="https://www.youtube.com/embed/jzNxXm5twx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
+     
+    
+    
+</body>
+</html>
+	
